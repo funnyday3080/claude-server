@@ -13,80 +13,25 @@
   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;900&display=swap');
   * { box-sizing: border-box; }
   body { margin: 0; padding: 0; }
-  [data-theme="legal"] {
-    --bg-app: #f4e9b8; --bg-paper: #fff8d4; --bg-card: #fffce8; --bg-sidebar: #fff0a8;
-    --ink: #1a1a2e; --ink-muted: #6b5e2f; --accent: #c8102e; --accent-soft: rgba(200, 16, 46, 0.08);
-    --line: rgba(200, 16, 46, 0.45); --rule: rgba(108, 117, 200, 0.35); --border: #1a1a2e;
-    --display-font: 'Caveat', Georgia, cursive; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace;
-    --display-weight: 700; --display-letter: -0.01em;
-  }
-  [data-theme="dev"] {
-    --bg-app: #0d1117; --bg-paper: #161b22; --bg-card: #1c2128; --bg-sidebar: #0d1117;
-    --ink: #c9d1d9; --ink-muted: #8b949e; --accent: #39d353; --accent-soft: rgba(57, 211, 83, 0.1);
-    --line: rgba(139, 148, 158, 0.2); --rule: transparent; --border: #30363d;
-    --display-font: 'JetBrains Mono', monospace; --body-font: 'JetBrains Mono', monospace; --mono-font: 'JetBrains Mono', monospace;
-    --display-weight: 700; --display-letter: -0.02em;
-  }
-  [data-theme="light"] {
-    --bg-app: #f5f5f0; --bg-paper: #ffffff; --bg-card: #fafafa; --bg-sidebar: #f0efe8;
-    --ink: #18181b; --ink-muted: #71717a; --accent: #18181b; --accent-soft: rgba(24, 24, 27, 0.05);
-    --line: rgba(24, 24, 27, 0.1); --rule: transparent; --border: #18181b;
-    --display-font: 'Inter', sans-serif; --body-font: 'Inter', sans-serif; --mono-font: 'JetBrains Mono', monospace;
-    --display-weight: 900; --display-letter: -0.04em;
-  }
-  [data-theme="midnight"] {
-    --bg-app: #0f1729; --bg-paper: #1a2238; --bg-card: #232d4a; --bg-sidebar: #0f1729;
-    --ink: #e0e7ff; --ink-muted: #94a3b8; --accent: #c4b5fd; --accent-soft: rgba(196, 181, 253, 0.1);
-    --line: rgba(148, 163, 184, 0.2); --rule: transparent; --border: #334155;
-    --display-font: 'Fraunces', Georgia, serif; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace;
-    --display-weight: 700; --display-letter: -0.02em;
-  }
-  [data-theme="solar"] {
-    --bg-app: #fdf6e3; --bg-paper: #fffbef; --bg-card: #fdf6e3; --bg-sidebar: #eee8d5;
-    --ink: #073642; --ink-muted: #586e75; --accent: #2aa198; --accent-soft: rgba(42, 161, 152, 0.1);
-    --line: rgba(7, 54, 66, 0.15); --rule: transparent; --border: #073642;
-    --display-font: 'Fraunces', Georgia, serif; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace;
-    --display-weight: 700; --display-letter: -0.02em;
-  }
-  [data-theme="forest"] {
-    --bg-app: #f4ebd8; --bg-paper: #faf3e3; --bg-card: #f4ebd8; --bg-sidebar: #ebe0c5;
-    --ink: #1a3622; --ink-muted: #4d6b3f; --accent: #d97706; --accent-soft: rgba(217, 119, 6, 0.1);
-    --line: rgba(26, 54, 34, 0.2); --rule: transparent; --border: #1a3622;
-    --display-font: 'Fraunces', Georgia, serif; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace;
-    --display-weight: 800; --display-letter: -0.02em;
-  }
-  [data-theme="rose"] {
-    --bg-app: #fce7e0; --bg-paper: #fef3ee; --bg-card: #fce7e0; --bg-sidebar: #f5d3c8;
-    --ink: #2d1b3d; --ink-muted: #6b4f5e; --accent: #be185d; --accent-soft: rgba(190, 24, 93, 0.1);
-    --line: rgba(45, 27, 61, 0.15); --rule: transparent; --border: #2d1b3d;
-    --display-font: 'Fraunces', Georgia, serif; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace;
-    --display-weight: 700; --display-letter: -0.02em;
-  }
-
+  [data-theme="legal"] { --bg-app: #f4e9b8; --bg-paper: #fff8d4; --bg-card: #fffce8; --bg-sidebar: #fff0a8; --ink: #1a1a2e; --ink-muted: #6b5e2f; --accent: #c8102e; --accent-soft: rgba(200, 16, 46, 0.08); --line: rgba(200, 16, 46, 0.45); --rule: rgba(108, 117, 200, 0.35); --border: #1a1a2e; --display-font: 'Caveat', Georgia, cursive; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace; --display-weight: 700; --display-letter: -0.01em; }
+  [data-theme="dev"] { --bg-app: #0d1117; --bg-paper: #161b22; --bg-card: #1c2128; --bg-sidebar: #0d1117; --ink: #c9d1d9; --ink-muted: #8b949e; --accent: #39d353; --accent-soft: rgba(57, 211, 83, 0.1); --line: rgba(139, 148, 158, 0.2); --rule: transparent; --border: #30363d; --display-font: 'JetBrains Mono', monospace; --body-font: 'JetBrains Mono', monospace; --mono-font: 'JetBrains Mono', monospace; --display-weight: 700; --display-letter: -0.02em; }
+  [data-theme="light"] { --bg-app: #f5f5f0; --bg-paper: #ffffff; --bg-card: #fafafa; --bg-sidebar: #f0efe8; --ink: #18181b; --ink-muted: #71717a; --accent: #18181b; --accent-soft: rgba(24, 24, 27, 0.05); --line: rgba(24, 24, 27, 0.1); --rule: transparent; --border: #18181b; --display-font: 'Inter', sans-serif; --body-font: 'Inter', sans-serif; --mono-font: 'JetBrains Mono', monospace; --display-weight: 900; --display-letter: -0.04em; }
+  [data-theme="midnight"] { --bg-app: #0f1729; --bg-paper: #1a2238; --bg-card: #232d4a; --bg-sidebar: #0f1729; --ink: #e0e7ff; --ink-muted: #94a3b8; --accent: #c4b5fd; --accent-soft: rgba(196, 181, 253, 0.1); --line: rgba(148, 163, 184, 0.2); --rule: transparent; --border: #334155; --display-font: 'Fraunces', Georgia, serif; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace; --display-weight: 700; --display-letter: -0.02em; }
+  [data-theme="solar"] { --bg-app: #fdf6e3; --bg-paper: #fffbef; --bg-card: #fdf6e3; --bg-sidebar: #eee8d5; --ink: #073642; --ink-muted: #586e75; --accent: #2aa198; --accent-soft: rgba(42, 161, 152, 0.1); --line: rgba(7, 54, 66, 0.15); --rule: transparent; --border: #073642; --display-font: 'Fraunces', Georgia, serif; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace; --display-weight: 700; --display-letter: -0.02em; }
+  [data-theme="forest"] { --bg-app: #f4ebd8; --bg-paper: #faf3e3; --bg-card: #f4ebd8; --bg-sidebar: #ebe0c5; --ink: #1a3622; --ink-muted: #4d6b3f; --accent: #d97706; --accent-soft: rgba(217, 119, 6, 0.1); --line: rgba(26, 54, 34, 0.2); --rule: transparent; --border: #1a3622; --display-font: 'Fraunces', Georgia, serif; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace; --display-weight: 800; --display-letter: -0.02em; }
+  [data-theme="rose"] { --bg-app: #fce7e0; --bg-paper: #fef3ee; --bg-card: #fce7e0; --bg-sidebar: #f5d3c8; --ink: #2d1b3d; --ink-muted: #6b4f5e; --accent: #be185d; --accent-soft: rgba(190, 24, 93, 0.1); --line: rgba(45, 27, 61, 0.15); --rule: transparent; --border: #2d1b3d; --display-font: 'Fraunces', Georgia, serif; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace; --display-weight: 700; --display-letter: -0.02em; }
   body { background: var(--bg-app); color: var(--ink); font-family: var(--body-font); transition: background 0.3s; }
   .display-font { font-family: var(--display-font); font-weight: var(--display-weight); letter-spacing: var(--display-letter); }
   .body-font { font-family: var(--body-font); }
   .mono-font { font-family: var(--mono-font); }
-  .ink-text { color: var(--ink); }
-  .ink-muted { color: var(--ink-muted); }
-  .accent { color: var(--accent); }
-  .accent-bg { background-color: var(--accent); }
-
+  .ink-text { color: var(--ink); } .ink-muted { color: var(--ink-muted); } .accent { color: var(--accent); } .accent-bg { background-color: var(--accent); }
   .paper { background-color: var(--bg-paper); transition: background 0.3s; position: relative; }
-  [data-theme="legal"] .paper {
-    background-image: linear-gradient(transparent 31px, var(--rule) 31px, var(--rule) 32px, transparent 32px);
-    background-size: 100% 32px;
-  }
+  [data-theme="legal"] .paper { background-image: linear-gradient(transparent 31px, var(--rule) 31px, var(--rule) 32px, transparent 32px); background-size: 100% 32px; }
   .sidebar-bg { background: var(--bg-sidebar); transition: background 0.3s; }
-  [data-theme="legal"] .sidebar-bg {
-    background-image: linear-gradient(transparent 27px, var(--rule) 27px, var(--rule) 28px, transparent 28px);
-    background-size: 100% 28px;
-  }
+  [data-theme="legal"] .sidebar-bg { background-image: linear-gradient(transparent 27px, var(--rule) 27px, var(--rule) 28px, transparent 28px); background-size: 100% 28px; }
   textarea, input { font-family: inherit; background: transparent; outline: none; color: var(--ink); }
   textarea::placeholder, input::placeholder { color: var(--ink-muted); opacity: 0.6; }
   textarea:focus, input:focus { background: var(--accent-soft); }
-  .note-card { background: var(--bg-card); transition: all 0.2s; border: 1.5px solid var(--border); }
-  .note-card:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--border); }
   .btn-primary { background: var(--ink); color: var(--bg-paper); transition: all 0.15s; border: 1.5px solid var(--ink); cursor: pointer; }
   .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
   .btn-accent { background: var(--accent); color: var(--bg-paper); transition: all 0.15s; border: 1.5px solid var(--accent); cursor: pointer; }
@@ -113,37 +58,47 @@
   .theme-chip { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: all 0.2s; position: relative; }
   .theme-chip:hover { transform: scale(1.15); }
   .theme-chip.active { border-color: var(--ink); transform: scale(1.15); }
-  .theme-chip.active::after {
-    content: '✓'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-    color: white; font-size: 11px; font-weight: bold; text-shadow: 0 0 2px rgba(0,0,0,0.5);
-  }
-  .status-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; font-family: var(--mono-font); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; border: 1.5px solid; }
-  .status-draft { color: var(--ink-muted); border-color: var(--ink-muted); background: transparent; }
-  .status-locked { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
-  .status-analyzed { color: var(--bg-paper); border-color: var(--accent); background: var(--accent); }
+  .theme-chip.active::after { content: '✓'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 11px; font-weight: bold; text-shadow: 0 0 2px rgba(0,0,0,0.5); }
   .mode-toggle { display: inline-flex; padding: 2px; background: var(--accent-soft); border: 1.5px solid var(--border); }
   .mode-toggle button { padding: 6px 14px; font-family: var(--mono-font); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; border: none; background: transparent; color: var(--ink-muted); cursor: pointer; transition: all 0.15s; }
   .mode-toggle button.active { background: var(--ink); color: var(--bg-paper); }
-  .tab-bar { display: flex; border-bottom: 2px solid var(--border); margin-bottom: 20px; }
-  .tab-bar button { padding: 10px 20px; background: transparent; border: none; cursor: pointer; font-family: var(--mono-font); font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-muted); border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.15s; }
-  .tab-bar button:hover { color: var(--ink); }
-  .tab-bar button.active { color: var(--accent); border-bottom-color: var(--accent); }
-  .analysis-card { border: 1.5px solid var(--border); padding: 20px; margin-bottom: 16px; background: var(--bg-card); position: relative; }
-  .analysis-card-empty { border: 1.5px dashed var(--ink-muted); padding: 24px; margin-bottom: 16px; background: transparent; text-align: center; }
   .free-textarea { width: 100%; min-height: 60vh; background: transparent; border: none; outline: none; font-family: var(--body-font); font-size: 16px; line-height: 1.8; color: var(--ink); resize: vertical; padding: 16px 0; }
   [data-theme="legal"] .free-textarea { background-image: linear-gradient(transparent 27px, var(--rule) 27px, var(--rule) 28px, transparent 28px); background-size: 100% 28px; line-height: 28px; padding: 0; }
   .section-block { margin-bottom: 24px; border-bottom: 1.5px solid var(--line); padding-bottom: 20px; }
   .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
   .section-textarea { width: 100%; min-height: 100px; background: transparent; border: none; outline: none; font-family: var(--body-font); font-size: 15px; line-height: 1.7; color: var(--ink); resize: vertical; }
+  
+  /* PDF 분할 화면 */
+  .split-container { display: flex; height: 100%; overflow: hidden; }
+  .split-pane { flex: 1; overflow-y: auto; min-width: 0; }
+  .split-divider { width: 4px; background: var(--border); cursor: col-resize; flex-shrink: 0; transition: background 0.15s; }
+  .split-divider:hover { background: var(--accent); }
+  
+  /* PDF 뷰어 */
+  .pdf-viewer { background: var(--bg-card); height: 100%; display: flex; flex-direction: column; border-left: 2px solid var(--border); }
+  .pdf-tabs { display: flex; gap: 4px; padding: 8px; background: var(--bg-sidebar); border-bottom: 1.5px solid var(--border); overflow-x: auto; }
+  .pdf-tab { display: flex; align-items: center; gap: 6px; padding: 6px 12px; font-family: var(--mono-font); font-size: 11px; background: transparent; border: 1.5px solid var(--border); cursor: pointer; white-space: nowrap; transition: all 0.15s; color: var(--ink); }
+  .pdf-tab:hover { background: var(--accent-soft); }
+  .pdf-tab.active { background: var(--accent); color: var(--bg-paper); border-color: var(--accent); }
+  .pdf-frame { flex: 1; width: 100%; border: none; background: white; }
+  .pdf-empty { flex: 1; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; padding: 40px; }
+  
+  /* PDF 첨부 영역 */
+  .pdf-attach-zone { border: 2px dashed var(--ink-muted); padding: 16px; text-align: center; cursor: pointer; transition: all 0.15s; }
+  .pdf-attach-zone:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .pdf-attach-zone.dragging { border-color: var(--accent); background: var(--accent-soft); border-style: solid; }
+  .pdf-list-item { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--border); margin-bottom: 6px; background: var(--bg-card); }
+  .pdf-list-item button { background: none; border: none; cursor: pointer; color: var(--ink-muted); }
+  .pdf-list-item button:hover { color: var(--accent); }
 </style>
 </head>
 <body>
 <div id="root"></div>
 <script type="text/babel" data-presets="env,react">
-const { useState, useEffect, useMemo, useRef } = React;
+const { useState, useEffect, useMemo, useRef, useCallback } = React;
 const storage = {
   get: (key) => { try { const v = localStorage.getItem(key); return v ? { value: v } : null; } catch { return null; } },
-  set: (key, value) => { try { localStorage.setItem(key, value); return { value }; } catch { return null; } }
+  set: (key, value) => { try { localStorage.setItem(key, value); return { value }; } catch (e) { return { error: e }; } }
 };
 const THEMES = [
   { id: 'legal', name: 'Legal Pad', color1: '#f4e9b8', color2: '#c8102e' },
@@ -169,20 +124,19 @@ const Icon = ({ name, className = "icon", size = 16, strokeWidth = 1.5, fill = "
     search: <><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></>,
     trash: <><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></>,
     edit: <><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/></>,
-    copy: <><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></>,
     check: <><path d="M20 6 9 17l-5-5"/></>,
     chevronRight: <><path d="m9 18 6-6-6-6"/></>,
     chevronDown: <><path d="m6 9 6 6 6-6"/></>,
     star: <><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></>,
     x: <><path d="M18 6 6 18"/><path d="m6 6 12 12"/></>,
     file: <><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></>,
-    sparkles: <><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></>,
     download: <><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></>,
     upload: <><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></>,
     menu: <><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></>,
     palette: <><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></>,
-    lock: <><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></>,
-    unlock: <><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></>
+    pdf: <><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 13v-1h6v1"/><path d="M11 18h2"/><path d="M12 12v6"/></>,
+    sidebar: <><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></>,
+    eye: <><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></>
   };
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill={fill} stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -200,25 +154,75 @@ const getDescendantIds = (folders, parentId) => {
   return ids;
 };
 
-// 마이그레이션: 구버전 노트 → 신버전
+// 마이그레이션: 모든 구버전 → v4
 const migrateNote = (note) => {
-  if (note.mode !== undefined && note.status !== undefined) return note;
-  const oldContent = [
-    note.summary && `[요약]\n${note.summary}`,
-    note.core && `[핵심]\n${note.core}`,
-    note.issues && `[이슈]\n${note.issues}`,
-    note.trends && `[트렌드]\n${note.trends}`
-  ].filter(Boolean).join('\n\n');
-  const oldLinks = note.links?.filter(l => l.url) || [];
-  const linksText = oldLinks.length ? '\n\n[링크]\n' + oldLinks.map(l => `- ${l.title || l.url}: ${l.url}`).join('\n') : '';
+  // v4 형식: 분석 제거됨, pdfs 추가
+  let migrated = note;
+  
+  // v3 → v4: 분석 데이터를 본문에 합치고 제거
+  if (note.status !== undefined || note.analysis !== undefined) {
+    let extra = '';
+    if (note.analysis) {
+      const a = note.analysis;
+      const parts = [
+        a.summary && `[요약]\n${a.summary}`,
+        a.core && `[핵심]\n${a.core}`,
+        a.trends && `[트렌드]\n${a.trends}`,
+        a.issues && `[이슈]\n${a.issues}`,
+        a.problems && `[예상문제]\n${a.problems}`
+      ].filter(Boolean);
+      if (parts.length > 0) extra = '\n\n--- (이전 분석 결과) ---\n\n' + parts.join('\n\n');
+    }
+    migrated = {
+      ...note,
+      freeContent: (note.freeContent || '') + extra,
+      // 구버전 필드 제거
+      status: undefined,
+      analysis: undefined,
+      lockedAt: undefined,
+      analyzedAt: undefined
+    };
+  }
+  
+  // v2 → v4: summary/core/issues/trends/links를 본문에 합침
+  if (migrated.summary !== undefined || migrated.core !== undefined) {
+    const oldContent = [
+      migrated.summary && `[요약]\n${migrated.summary}`,
+      migrated.core && `[핵심]\n${migrated.core}`,
+      migrated.issues && `[이슈]\n${migrated.issues}`,
+      migrated.trends && `[트렌드]\n${migrated.trends}`
+    ].filter(Boolean).join('\n\n');
+    const oldLinks = migrated.links?.filter(l => l.url) || [];
+    const linksText = oldLinks.length ? '\n\n[링크]\n' + oldLinks.map(l => `- ${l.title || l.url}: ${l.url}`).join('\n') : '';
+    
+    migrated = {
+      id: migrated.id,
+      title: migrated.title || '제목 없음',
+      mode: migrated.mode || 'free',
+      freeContent: migrated.freeContent !== undefined ? migrated.freeContent : (oldContent + linksText),
+      sections: migrated.sections || DEFAULT_SECTIONS.map(s => ({ ...s, content: '' })),
+      pdfs: migrated.pdfs || [],
+      examRate: migrated.examRate || 0,
+      isExam: migrated.isExam || false,
+      tags: migrated.tags || [],
+      createdAt: migrated.createdAt,
+      updatedAt: migrated.updatedAt
+    };
+  }
+  
+  // 누락된 필드 보강
   return {
-    id: note.id, title: note.title || '제목 없음',
-    mode: 'free', freeContent: oldContent + linksText,
-    sections: DEFAULT_SECTIONS.map(s => ({ ...s, content: '' })),
-    status: 'draft', lockedAt: null, analyzedAt: null,
-    analysis: { summary: note.summary || '', core: note.core || '', trends: note.trends || '', issues: note.issues || '', problems: '' },
-    examRate: note.examRate || 0, isExam: note.isExam || false, tags: note.tags || [],
-    createdAt: note.createdAt, updatedAt: note.updatedAt
+    id: migrated.id,
+    title: migrated.title || '제목 없음',
+    mode: migrated.mode || 'free',
+    freeContent: migrated.freeContent || '',
+    sections: migrated.sections || DEFAULT_SECTIONS.map(s => ({ ...s, content: '' })),
+    pdfs: migrated.pdfs || [],
+    examRate: migrated.examRate || 0,
+    isExam: migrated.isExam || false,
+    tags: migrated.tags || [],
+    createdAt: migrated.createdAt || new Date().toISOString(),
+    updatedAt: migrated.updatedAt || new Date().toISOString()
   };
 };
 const migrateFolders = (folders) => folders.map(f => ({
@@ -226,6 +230,20 @@ const migrateFolders = (folders) => folders.map(f => ({
   parentId: f.parentId !== undefined ? f.parentId : null,
   notes: (f.notes || []).map(migrateNote)
 }));
+
+// 파일 → DataURL 변환
+const fileToDataURL = (file) => new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.onload = () => resolve(reader.result);
+  reader.onerror = reject;
+  reader.readAsDataURL(file);
+});
+
+const formatBytes = (bytes) => {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+};
 
 function StudyNotebook() {
   const [folders, setFolders] = useState([]);
@@ -242,7 +260,10 @@ function StudyNotebook() {
   const [toast, setToast] = useState('');
   const [theme, setTheme] = useState('legal');
   const [showThemes, setShowThemes] = useState(false);
+  const [pdfPaneOpen, setPdfPaneOpen] = useState(false);
+  const [activePdfId, setActivePdfId] = useState(null);
   const fileInputRef = useRef(null);
+  const pdfInputRef = useRef(null);
 
   useEffect(() => {
     const result = storage.get('notebook-data');
@@ -260,7 +281,11 @@ function StudyNotebook() {
 
   useEffect(() => {
     if (!loaded) return;
-    storage.set('notebook-data', JSON.stringify({ folders, expanded: expandedFolders }));
+    const result = storage.set('notebook-data', JSON.stringify({ folders, expanded: expandedFolders }));
+    if (result?.error) {
+      // QuotaExceededError 등
+      console.error('저장 실패:', result.error);
+    }
   }, [folders, expandedFolders, loaded]);
 
   useEffect(() => {
@@ -270,14 +295,27 @@ function StudyNotebook() {
 
   const showToast = (msg) => { setToast(msg); setTimeout(() => setToast(''), 2500); };
 
-  const exportData = () => {
-    const data = { version: 3, exportedAt: new Date().toISOString(), folders, expanded: expandedFolders };
+  const exportData = (includePdfs) => {
+    let exportFolders = folders;
+    if (!includePdfs) {
+      // PDF 제외하고 메타데이터만
+      exportFolders = folders.map(f => ({
+        ...f,
+        notes: f.notes.map(n => ({
+          ...n,
+          pdfs: n.pdfs?.map(p => ({ ...p, dataUrl: null, _excluded: true })) || []
+        }))
+      }));
+    }
+    const data = { version: 4, exportedAt: new Date().toISOString(), folders: exportFolders, expanded: expandedFolders };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url; a.download = `study-notebook-${new Date().toISOString().slice(0, 10)}.json`;
-    a.click(); URL.revokeObjectURL(url);
-    showToast('백업 완료');
+    a.href = url;
+    a.download = `study-notebook-${includePdfs ? 'full' : 'notes'}-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    showToast(includePdfs ? 'PDF 포함 백업 완료' : '노트만 백업 완료');
   };
 
   const importData = (e) => {
@@ -308,7 +346,6 @@ function StudyNotebook() {
     setNewFolderParent(parentId); setNewFolderName('');
     if (parentId) setExpandedFolders({ ...expandedFolders, [parentId]: true });
   };
-
   const createFolder = () => {
     if (!newFolderName.trim()) { setNewFolderParent(undefined); return; }
     const newFolder = { id: Date.now().toString(), name: newFolderName.trim(), parentId: newFolderParent === null ? null : newFolderParent, notes: [], createdAt: new Date().toISOString() };
@@ -316,7 +353,6 @@ function StudyNotebook() {
     setExpandedFolders({ ...expandedFolders, [newFolder.id]: true });
     setNewFolderName(''); setNewFolderParent(undefined);
   };
-
   const deleteFolder = (folderId) => {
     const folder = findFolder(folders, folderId);
     const descendantIds = getDescendantIds(folders, folderId);
@@ -330,101 +366,85 @@ function StudyNotebook() {
     setFolders(folders.filter(f => !allIds.includes(f.id)));
     if (allIds.includes(activeFolder)) { setActiveFolder(null); setActiveNote(null); }
   };
-
-  const startRename = (folderId) => {
-    setRenamingFolder(folderId); setRenameValue(findFolder(folders, folderId).name);
-  };
+  const startRename = (folderId) => { setRenamingFolder(folderId); setRenameValue(findFolder(folders, folderId).name); };
   const commitRename = () => {
     if (!renameValue.trim()) { setRenamingFolder(null); return; }
     setFolders(folders.map(f => f.id === renamingFolder ? { ...f, name: renameValue.trim() } : f));
     setRenamingFolder(null); setRenameValue('');
   };
-
   const createNote = (folderId) => {
     const newNote = {
       id: Date.now().toString(), title: '제목 없음',
       mode: 'free', freeContent: '',
       sections: DEFAULT_SECTIONS.map(s => ({ ...s, content: '' })),
-      status: 'draft', lockedAt: null, analyzedAt: null,
-      analysis: { summary: '', core: '', trends: '', issues: '', problems: '' },
+      pdfs: [],
       examRate: 0, isExam: false, tags: [],
       createdAt: new Date().toISOString(), updatedAt: new Date().toISOString()
     };
     setFolders(folders.map(f => f.id === folderId ? { ...f, notes: [...f.notes, newNote] } : f));
     setActiveFolder(folderId); setActiveNote(newNote.id); setSidebarOpen(false);
+    setPdfPaneOpen(false); setActivePdfId(null);
   };
-
   const updateNote = (folderId, noteId, updates) => {
     setFolders(folders.map(f => f.id === folderId
       ? { ...f, notes: f.notes.map(n => n.id === noteId ? { ...n, ...updates, updatedAt: new Date().toISOString() } : n) }
       : f));
   };
-
   const deleteNote = (folderId, noteId) => {
     if (!confirm('이 노트를 삭제할까요?')) return;
     setFolders(folders.map(f => f.id === folderId ? { ...f, notes: f.notes.filter(n => n.id !== noteId) } : f));
-    if (activeNote === noteId) setActiveNote(null);
+    if (activeNote === noteId) { setActiveNote(null); setPdfPaneOpen(false); }
   };
 
   const currentFolder = findFolder(folders, activeFolder);
   const currentNote = currentFolder?.notes.find(n => n.id === activeNote);
 
-  const copyText = (text, msg) => {
-    const fallback = () => {
-      const ta = document.createElement('textarea');
-      ta.value = text; document.body.appendChild(ta); ta.select();
-      document.execCommand('copy'); document.body.removeChild(ta);
-    };
-    if (navigator.clipboard?.writeText) {
-      navigator.clipboard.writeText(text).then(() => msg && showToast(msg)).catch(fallback);
-    } else { fallback(); if (msg) showToast(msg); }
-  };
-
-  const extractContent = (note) => {
-    if (note.mode === 'free') return note.freeContent || '';
-    return note.sections.filter(s => s.content?.trim()).map(s => `[${s.title}]\n${s.content}`).join('\n\n');
-  };
-
-  const buildAnalysisPrompt = (note, mode) => {
-    const content = extractContent(note);
-    const tagInfo = note.tags?.length ? ` (분야/태그: ${note.tags.join(', ')})` : '';
-    const noteHeader = `[학습 노트]\n제목: ${note.title}${tagInfo}\n\n${content}\n\n---\n\n`;
-    const requests = {
-      analyze: `위는 제가 공부하면서 작성한 노트입니다. 가능하면 웹 검색을 활용해서 최신 정보를 반영하여 다음 형식대로 정리해주세요.\n\n[답변 형식 — 반드시 아래 헤더 그대로 사용]\n\n■ 요약\n(이 주제를 한 문단으로. 3~5문장. 노트 내용 기반으로 요약하되 부족한 부분은 보충)\n\n■ 핵심 파악\n(반드시 알아야 할 핵심 개념 5~7개. 불릿 포인트로. 각 1~2줄)\n\n■ 최신 트렌드\n(최근 1~2년 내 동향, 변화, 업데이트 3~5개. 가능하면 시점 명시)\n\n■ 이슈가 될 만한 것들\n(논쟁점·자주 헷갈리는 부분·비판적 시각 3~5개)\n\n■ 관련 링크\n(공식 자료, 신뢰할 수 있는 출처 3~5개. "제목 - URL" 형식)`,
-      basic: `위 노트를 바탕으로 예상문제 5개를 만들어주세요.\n- 객관식 3개 (선택지 4개씩)\n- 주관식 2개\n- 각 문제마다 정답과 해설 포함\n\n[답변 형식]\n■ 예상문제\n(문제들 + 정답 + 해설)`,
-      applied: `위 노트의 내용을 응용한 심화 문제 3개를 만들어주세요.\n- 단순 암기 X\n- 사례 적용·분석·비판적 사고를 요구하는 문제\n- 모범답안 포함\n\n[답변 형식]\n■ 응용 문제\n(문제들 + 모범답안)`,
-      mixed: `위 노트를 바탕으로 다음을 모두 만들어주세요:\n1) 기본 예상문제 3개 (객관식 + 정답·해설)\n2) 응용 심화문제 2개 (사례 적용형 + 모범답안)\n\n[답변 형식]\n■ 예상문제\n(기본 + 응용 모두 포함)`
-    };
-    return noteHeader + requests[mode];
-  };
-
-  const lockNote = () => {
-    if (!confirm('이 노트를 마감할까요?\n마감 후에도 [다시 편집]으로 수정 가능합니다.')) return;
-    updateNote(activeFolder, activeNote, { status: 'locked', lockedAt: new Date().toISOString() });
-    showToast('마감 완료');
-  };
-
-  const unlockNote = () => {
-    if (currentNote.status === 'analyzed') {
-      if (!confirm('다시 편집하면 분석 결과는 유지됩니다.\n계속할까요?')) return;
+  // PDF 추가
+  const addPdf = async (file) => {
+    if (!file || !currentNote) return;
+    if (file.type !== 'application/pdf') {
+      alert('PDF 파일만 업로드 가능합니다.');
+      return;
     }
-    updateNote(activeFolder, activeNote, { status: 'draft' });
-    showToast('편집 모드로 전환');
+    if (file.size > 20 * 1024 * 1024) {
+      if (!confirm(`파일이 ${formatBytes(file.size)}로 큽니다.\n저장 공간을 초과할 수 있어요. 계속할까요?`)) return;
+    }
+    try {
+      const dataUrl = await fileToDataURL(file);
+      const newPdf = {
+        id: Date.now().toString(),
+        name: file.name,
+        size: file.size,
+        dataUrl: dataUrl,
+        addedAt: new Date().toISOString()
+      };
+      const newPdfs = [...(currentNote.pdfs || []), newPdf];
+      // 임시로 시도
+      const testData = JSON.stringify({ folders: folders.map(f => f.id === activeFolder ? { ...f, notes: f.notes.map(n => n.id === activeNote ? { ...n, pdfs: newPdfs } : n) } : f) });
+      try {
+        localStorage.setItem('notebook-data-test', testData);
+        localStorage.removeItem('notebook-data-test');
+      } catch (e) {
+        alert('저장 공간이 부족합니다. 다른 PDF를 삭제하거나 작은 파일을 사용하세요.');
+        return;
+      }
+      updateNote(activeFolder, activeNote, { pdfs: newPdfs });
+      setActivePdfId(newPdf.id);
+      setPdfPaneOpen(true);
+      showToast(`${file.name} 첨부 완료`);
+    } catch (err) {
+      alert('PDF 첨부 실패: ' + err.message);
+    }
   };
-
-  const requestAnalysis = (mode) => {
-    const text = buildAnalysisPrompt(currentNote, mode);
-    copyText(text, mode === 'analyze' ? '분석 요청 복사 완료' : '문제 요청 복사 완료');
-  };
-
-  const updateAnalysis = (field, value) => {
-    const newStatus = (currentNote.status === 'locked' || currentNote.status === 'analyzed') && value?.trim()
-      ? 'analyzed' : currentNote.status;
-    updateNote(activeFolder, activeNote, {
-      analysis: { ...currentNote.analysis, [field]: value },
-      analyzedAt: value?.trim() ? new Date().toISOString() : currentNote.analyzedAt,
-      status: newStatus
-    });
+  
+  const removePdf = (pdfId) => {
+    if (!confirm('이 PDF를 삭제할까요?')) return;
+    const newPdfs = currentNote.pdfs.filter(p => p.id !== pdfId);
+    updateNote(activeFolder, activeNote, { pdfs: newPdfs });
+    if (activePdfId === pdfId) {
+      setActivePdfId(newPdfs[0]?.id || null);
+    }
+    if (newPdfs.length === 0) setPdfPaneOpen(false);
   };
 
   const matchingNoteIds = useMemo(() => {
@@ -496,14 +516,14 @@ function StudyNotebook() {
               {filteredNotes.length > 0 && (
                 <div style={{ paddingLeft: `${(depth + 1) * 12 + 8}px` }}>
                   {filteredNotes.map(note => {
-                    const statusIcon = note.status === 'analyzed' ? '✨' : note.status === 'locked' ? '🔒' : '✏️';
+                    const hasPdf = note.pdfs && note.pdfs.length > 0;
                     return (
                       <button key={note.id}
-                        onClick={() => { setActiveFolder(folder.id); setActiveNote(note.id); setSidebarOpen(false); }}
+                        onClick={() => { setActiveFolder(folder.id); setActiveNote(note.id); setSidebarOpen(false); setPdfPaneOpen(false); setActivePdfId(null); }}
                         className={`w-full text-left px-2 py-1.5 text-sm flex items-center gap-2 ${activeNote === note.id ? 'accent-bg' : 'btn-ghost'}`}
                         style={activeNote === note.id ? { color: 'var(--bg-paper)' } : {}}>
-                        <span style={{ fontSize: '11px' }}>{statusIcon}</span>
                         {note.isExam && <Icon name="star" size={12} strokeWidth={1.5} fill="currentColor" />}
+                        {hasPdf && <span style={{ fontSize: '11px' }}>📎</span>}
                         <span className="truncate body-font">{note.title}</span>
                       </button>
                     );
@@ -528,6 +548,8 @@ function StudyNotebook() {
     });
   };
 
+  const activePdf = currentNote?.pdfs?.find(p => p.id === activePdfId) || currentNote?.pdfs?.[0];
+
   return (
     <div className="min-h-screen w-full body-font">
       {toast && (
@@ -538,9 +560,12 @@ function StudyNotebook() {
         </div>
       )}
       <input ref={fileInputRef} type="file" accept=".json" onChange={importData} className="hidden" />
+      <input ref={pdfInputRef} type="file" accept="application/pdf,.pdf" onChange={(e) => { if (e.target.files[0]) addPdf(e.target.files[0]); e.target.value = ''; }} className="hidden" />
+
       <div className="flex h-screen overflow-hidden">
         {sidebarOpen && <div className="sidebar-overlay md:hidden" onClick={() => setSidebarOpen(false)} />}
-        <aside className={`w-80 border-r-2 flex-col sidebar-bg ${sidebarOpen ? 'sidebar-mobile slide-in flex' : 'hidden md:flex'}`} style={{ borderColor: 'var(--border)' }}>
+
+        <aside className={`w-80 border-r-2 flex-col sidebar-bg flex-shrink-0 ${sidebarOpen ? 'sidebar-mobile slide-in flex' : 'hidden md:flex'}`} style={{ borderColor: 'var(--border)' }}>
           <div className="p-6 border-b-2 flex items-start justify-between" style={{ borderColor: 'var(--border)' }}>
             <div>
               <div className="flex items-baseline gap-2 mb-1">
@@ -573,7 +598,10 @@ function StudyNotebook() {
               </button>
             )}
             <div className="flex gap-1">
-              <button onClick={exportData} className="flex-1 flex items-center justify-center gap-1.5 px-2 py-1.5 btn-ghost text-xs mono-font">
+              <button onClick={() => {
+                const choice = confirm('PDF도 포함해서 백업할까요?\n\n[확인] = PDF 포함 (파일 큼)\n[취소] = 노트만 (가벼움)');
+                exportData(choice);
+              }} className="flex-1 flex items-center justify-center gap-1.5 px-2 py-1.5 btn-ghost text-xs mono-font">
                 <Icon name="download" size={14} />BACKUP
               </button>
               <button onClick={() => fileInputRef.current?.click()} className="flex-1 flex items-center justify-center gap-1.5 px-2 py-1.5 btn-ghost text-xs mono-font">
@@ -616,24 +644,77 @@ function StudyNotebook() {
             )}
           </div>
         </aside>
-        <main className="flex-1 overflow-y-auto paper relative">
-          <div className="md:hidden sticky top-0 z-30 paper border-b-2 px-4 py-3 flex items-center justify-between" style={{ borderColor: 'var(--border)' }}>
-            <button onClick={() => setSidebarOpen(true)} className="btn-ghost p-2 flex items-center gap-2">
-              <Icon name="menu" size={20} />
-              <span className="text-sm display-font font-semibold">메뉴</span>
-            </button>
-            <div className="display-font" style={{ fontSize: '20px' }}>Study Notebook</div>
-          </div>
-          {!currentNote ? (
-            <EmptyState folders={folders} createFolder={() => { startCreateFolder(null); setSidebarOpen(true); }} theme={theme} />
-          ) : (
-            <NoteView note={currentNote} folder={currentFolder}
-              onUpdate={updates => updateNote(activeFolder, activeNote, updates)}
-              onDelete={() => deleteNote(activeFolder, activeNote)}
-              onLock={lockNote} onUnlock={unlockNote}
-              onAnalysisRequest={requestAnalysis} onAnalysisUpdate={updateAnalysis} />
+
+        {/* 메인 + PDF 분할 */}
+        <div className="flex-1 flex overflow-hidden">
+          <main className={`overflow-y-auto paper relative ${pdfPaneOpen ? 'flex-1' : 'flex-1'}`} style={{ minWidth: 0 }}>
+            <div className="md:hidden sticky top-0 z-30 paper border-b-2 px-4 py-3 flex items-center justify-between" style={{ borderColor: 'var(--border)' }}>
+              <button onClick={() => setSidebarOpen(true)} className="btn-ghost p-2 flex items-center gap-2">
+                <Icon name="menu" size={20} />
+                <span className="text-sm display-font font-semibold">메뉴</span>
+              </button>
+              <div className="display-font" style={{ fontSize: '20px' }}>Study Notebook</div>
+            </div>
+            {!currentNote ? (
+              <EmptyState folders={folders} createFolder={() => { startCreateFolder(null); setSidebarOpen(true); }} theme={theme} />
+            ) : (
+              <NoteView
+                note={currentNote}
+                folder={currentFolder}
+                onUpdate={updates => updateNote(activeFolder, activeNote, updates)}
+                onDelete={() => deleteNote(activeFolder, activeNote)}
+                onAddPdf={() => pdfInputRef.current?.click()}
+                onAddPdfFile={addPdf}
+                onRemovePdf={removePdf}
+                onTogglePdfPane={() => setPdfPaneOpen(!pdfPaneOpen)}
+                onSelectPdf={(id) => { setActivePdfId(id); setPdfPaneOpen(true); }}
+                pdfPaneOpen={pdfPaneOpen}
+              />
+            )}
+          </main>
+
+          {/* PDF 패널 */}
+          {pdfPaneOpen && currentNote && (
+            <div className="pdf-viewer fade-in" style={{ width: '50%', flexShrink: 0 }}>
+              <div className="pdf-tabs">
+                {currentNote.pdfs?.length > 0 ? (
+                  currentNote.pdfs.map(pdf => (
+                    <button key={pdf.id}
+                      className={`pdf-tab ${activePdfId === pdf.id || (!activePdfId && pdf.id === currentNote.pdfs[0].id) ? 'active' : ''}`}
+                      onClick={() => setActivePdfId(pdf.id)}>
+                      <Icon name="pdf" size={12} />
+                      <span className="truncate" style={{ maxWidth: '120px' }}>{pdf.name}</span>
+                      <span onClick={(e) => { e.stopPropagation(); removePdf(pdf.id); }} style={{ cursor: 'pointer', opacity: 0.6 }}>
+                        <Icon name="x" size={12} />
+                      </span>
+                    </button>
+                  ))
+                ) : (
+                  <span className="text-xs ink-muted body-font italic px-2">첨부된 PDF 없음</span>
+                )}
+                <button onClick={() => setPdfPaneOpen(false)} className="pdf-tab" style={{ marginLeft: 'auto' }} title="닫기">
+                  <Icon name="x" size={12} />
+                </button>
+              </div>
+              {activePdf?.dataUrl ? (
+                <iframe src={activePdf.dataUrl} className="pdf-frame" title={activePdf.name} />
+              ) : activePdf?._excluded ? (
+                <div className="pdf-empty">
+                  <Icon name="pdf" size={48} className="ink-muted" strokeWidth={1} />
+                  <p className="text-sm ink-muted body-font italic text-center">
+                    이 PDF는 백업에서 제외됐습니다.<br/>
+                    원본 파일을 다시 첨부해주세요.
+                  </p>
+                </div>
+              ) : (
+                <div className="pdf-empty">
+                  <Icon name="pdf" size={48} className="ink-muted" strokeWidth={1} />
+                  <p className="text-sm ink-muted body-font italic text-center">PDF를 선택하거나 첨부하세요</p>
+                </div>
+              )}
+            </div>
           )}
-        </main>
+        </div>
       </div>
     </div>
   );
@@ -648,16 +729,16 @@ function EmptyState({ folders, createFolder, theme }) {
             Study<br/><span className="accent italic">Notebook</span>
           </div>
         </div>
-        <p className="body-font text-base md:text-lg ink-muted leading-relaxed mb-2 italic">"먼저 쓰고, 나중에 정리한다"</p>
+        <p className="body-font text-base md:text-lg ink-muted leading-relaxed mb-2 italic">"내가 쓰고, 내가 채운다"</p>
         <div className="my-8 mx-auto w-24 h-px" style={{ background: 'var(--border)' }}></div>
         <div className="text-left space-y-3 mb-8">
           {[
-            ['01', '공부하면서 자유롭게 본문 작성'],
-            ['02', '자유 모드 ↔ 섹션 모드 전환 가능'],
-            ['03', '✏️ 작성 중 → 🔒 마감 → ✨ 분석 완료'],
-            ['04', '마감 후 Claude가 요약·핵심·트렌드·이슈 정리'],
-            ['05', '예상문제·응용문제 한 번 클릭으로 생성'],
-            ['06', '7가지 테마 + JSON 백업·복원']
+            ['01', '폴더를 트리 구조로 — 대분류 → 중분류 → 소분류'],
+            ['02', '자유 모드 ↔ 섹션 모드 자유롭게 작성'],
+            ['03', '📎 PDF 첨부 → 분할 화면으로 보면서 작성'],
+            ['04', '시험용 노트는 출제율 별점 표시'],
+            ['05', '7가지 테마 — 기분따라 색상 변경'],
+            ['06', 'JSON 백업·복원으로 기기 간 이동 가능']
           ].map(([num, text]) => (
             <div key={num} className="flex gap-3 text-sm">
               <span className="mono-font accent font-semibold">{num}</span>
@@ -673,12 +754,9 @@ function EmptyState({ folders, createFolder, theme }) {
   );
 }
 
-function NoteView({ note, folder, onUpdate, onDelete, onLock, onUnlock, onAnalysisRequest, onAnalysisUpdate }) {
-  const [tab, setTab] = useState('original');
+function NoteView({ note, folder, onUpdate, onDelete, onAddPdf, onAddPdfFile, onRemovePdf, onTogglePdfPane, onSelectPdf, pdfPaneOpen }) {
   const [tagInput, setTagInput] = useState('');
-  const isDraft = note.status === 'draft';
-  const isLocked = note.status === 'locked' || note.status === 'analyzed';
-  const isAnalyzed = note.status === 'analyzed';
+  const [dragging, setDragging] = useState(false);
 
   const addTag = () => {
     const t = tagInput.trim();
@@ -686,57 +764,54 @@ function NoteView({ note, folder, onUpdate, onDelete, onLock, onUnlock, onAnalys
     onUpdate({ tags: [...note.tags, t] }); setTagInput('');
   };
 
+  const handleDrop = (e) => {
+    e.preventDefault(); setDragging(false);
+    const file = e.dataTransfer.files[0];
+    if (file) onAddPdfFile(file);
+  };
+
+  const hasPdfs = note.pdfs && note.pdfs.length > 0;
+
   return (
-    <div className="max-w-4xl mx-auto px-4 md:px-12 py-6 md:py-10 fade-in relative">
+    <div className={`mx-auto px-4 md:px-12 py-6 md:py-10 fade-in relative ${pdfPaneOpen ? 'max-w-none' : 'max-w-4xl'}`}>
       <div className="mb-6">
-        <div className="flex items-center gap-2 text-xs mono-font ink-muted tracking-wider mb-3">
-          <span>{folder.name}</span>
-          <Icon name="chevronRight" size={12} strokeWidth={2} />
-          <span>NOTE</span>
-        </div>
-        <input type="text" value={note.title} onChange={e => onUpdate({ title: e.target.value })}
-          placeholder="제목..." disabled={isLocked}
-          className="display-font ink-text w-full leading-tight"
-          style={{ background: 'transparent', fontSize: 'clamp(28px, 5vw, 44px)' }} />
-        <div className="flex items-center justify-between mt-4 flex-wrap gap-3">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className={`status-badge ${isAnalyzed ? 'status-analyzed' : isLocked ? 'status-locked' : 'status-draft'}`}>
-              {isAnalyzed ? '✨ 분석 완료' : isLocked ? '🔒 마감됨' : '✏️ 작성 중'}
-            </span>
-            {note.lockedAt && (
-              <span className="text-xs ink-muted mono-font">{new Date(note.lockedAt).toLocaleDateString('ko-KR')}</span>
-            )}
-          </div>
+        <div className="flex items-center justify-between gap-2 text-xs mono-font ink-muted tracking-wider mb-3 flex-wrap">
+          <span className="flex items-center gap-2">
+            <span>{folder.name}</span>
+            <Icon name="chevronRight" size={12} strokeWidth={2} />
+            <span>NOTE</span>
+          </span>
           <div className="flex items-center gap-2">
-            {isDraft ? (
-              <>
-                <button onClick={onDelete} className="px-3 py-1.5 btn-ghost text-xs mono-font flex items-center gap-1.5">
-                  <Icon name="trash" size={14} />DELETE
-                </button>
-                <button onClick={onLock} className="btn-accent px-4 py-2 text-xs mono-font tracking-wider flex items-center gap-1.5">
-                  <Icon name="lock" size={14} strokeWidth={2} />마감하기
-                </button>
-              </>
-            ) : (
-              <button onClick={onUnlock} className="btn-ghost px-4 py-2 text-xs mono-font tracking-wider flex items-center gap-1.5">
-                <Icon name="unlock" size={14} strokeWidth={2} />다시 편집
+            {hasPdfs && (
+              <button onClick={onTogglePdfPane} className="btn-ghost px-3 py-1.5 text-xs mono-font flex items-center gap-1.5">
+                <Icon name="sidebar" size={12} />
+                {pdfPaneOpen ? 'PDF 닫기' : 'PDF 보기'}
               </button>
             )}
           </div>
         </div>
-        <div className="flex items-center gap-3 flex-wrap mt-4">
-          {!isLocked && (
-            <label className="flex items-center gap-2 text-sm cursor-pointer">
-              <input type="checkbox" checked={note.isExam} onChange={e => onUpdate({ isExam: e.target.checked })} className="w-4 h-4" />
-              <span className="body-font">시험 노트</span>
-            </label>
-          )}
+
+        <input type="text" value={note.title} onChange={e => onUpdate({ title: e.target.value })}
+          placeholder="제목..." className="display-font ink-text w-full leading-tight"
+          style={{ background: 'transparent', fontSize: 'clamp(28px, 5vw, 44px)' }} />
+
+        <div className="flex items-center justify-end mt-3">
+          <button onClick={onDelete} className="px-3 py-1.5 btn-ghost text-xs mono-font flex items-center gap-1.5">
+            <Icon name="trash" size={14} />DELETE
+          </button>
+        </div>
+
+        <div className="flex items-center gap-3 flex-wrap mt-2">
+          <label className="flex items-center gap-2 text-sm cursor-pointer">
+            <input type="checkbox" checked={note.isExam} onChange={e => onUpdate({ isExam: e.target.checked })} className="w-4 h-4" />
+            <span className="body-font">시험 노트</span>
+          </label>
           {note.isExam && (
             <div className="flex items-center gap-2">
               <span className="section-label">출제율</span>
               <div className="flex gap-0.5">
                 {[1,2,3,4,5].map(n => (
-                  <button key={n} onClick={() => !isLocked && onUpdate({ examRate: note.examRate === n ? 0 : n })} className="star-btn" disabled={isLocked}>
+                  <button key={n} onClick={() => onUpdate({ examRate: note.examRate === n ? 0 : n })} className="star-btn">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill={n <= note.examRate ? 'var(--accent)' : 'transparent'} stroke={n <= note.examRate ? 'var(--accent)' : 'var(--ink-muted)'} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                       <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                     </svg>
@@ -749,62 +824,75 @@ function NoteView({ note, folder, onUpdate, onDelete, onLock, onUnlock, onAnalys
             {note.tags.map(tag => (
               <span key={tag} className="text-xs px-2 py-0.5 mono-font flex items-center gap-1" style={{ border: '1px solid var(--border)' }}>
                 {tag}
-                {!isLocked && <button onClick={() => onUpdate({ tags: note.tags.filter(t => t !== tag) })}><Icon name="x" size={10} strokeWidth={2} /></button>}
+                <button onClick={() => onUpdate({ tags: note.tags.filter(t => t !== tag) })}><Icon name="x" size={10} strokeWidth={2} /></button>
               </span>
             ))}
-            {!isLocked && (
-              <input type="text" value={tagInput} onChange={e => setTagInput(e.target.value)}
-                onKeyDown={e => e.key === 'Enter' && (e.preventDefault(), addTag())}
-                placeholder="+ 태그" className="text-xs px-2 py-0.5 mono-font"
-                style={{ border: '1px dashed var(--ink-muted)', minWidth: '70px' }} />
-            )}
+            <input type="text" value={tagInput} onChange={e => setTagInput(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && (e.preventDefault(), addTag())}
+              placeholder="+ 태그" className="text-xs px-2 py-0.5 mono-font"
+              style={{ border: '1px dashed var(--ink-muted)', minWidth: '70px' }} />
           </div>
         </div>
       </div>
-      <div className="my-6 w-full h-px" style={{ background: 'var(--border)' }}></div>
-      {isLocked && (
-        <div className="tab-bar">
-          <button onClick={() => setTab('original')} className={tab === 'original' ? 'active' : ''}>📝 내가 쓴 원본</button>
-          <button onClick={() => setTab('analysis')} className={tab === 'analysis' ? 'active' : ''}>
-            ✨ 분석 결과{isAnalyzed && <span className="ml-2 mono-font text-xs">●</span>}
-          </button>
-        </div>
-      )}
-      {(!isLocked || tab === 'original') && (
-        <OriginalView note={note} onUpdate={onUpdate} isLocked={isLocked} />
-      )}
-      {isLocked && tab === 'analysis' && (
-        <AnalysisView note={note} onAnalysisRequest={onAnalysisRequest} onAnalysisUpdate={onAnalysisUpdate} />
-      )}
-    </div>
-  );
-}
 
-function OriginalView({ note, onUpdate, isLocked }) {
-  return (
-    <div>
-      {!isLocked && (
-        <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
-          <div className="mode-toggle">
-            <button onClick={() => onUpdate({ mode: 'free' })} className={note.mode === 'free' ? 'active' : ''}>자유</button>
-            <button onClick={() => onUpdate({ mode: 'sections' })} className={note.mode === 'sections' ? 'active' : ''}>섹션</button>
-          </div>
-          <div className="text-xs ink-muted body-font italic">
-            {note.mode === 'free' ? '자유롭게 다 쏟아내세요' : '주제별로 분류해서 작성'}
-          </div>
+      <div className="my-6 w-full h-px" style={{ background: 'var(--border)' }}></div>
+
+      {/* PDF 첨부 영역 */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-3">
+          <span className="section-label flex items-center gap-1.5"><Icon name="pdf" size={12} />PDF 첨부</span>
         </div>
-      )}
-      {note.mode === 'free' && (
-        isLocked ? (
-          <div className="body-font text-base leading-relaxed whitespace-pre-wrap" style={{ minHeight: '40vh' }}>
-            {note.freeContent || <span className="ink-muted italic">(내용 없음)</span>}
+        {hasPdfs ? (
+          <div>
+            {note.pdfs.map(pdf => (
+              <div key={pdf.id} className="pdf-list-item">
+                <Icon name="pdf" size={14} className="accent" />
+                <span className="flex-1 truncate body-font text-sm">{pdf.name}</span>
+                <span className="text-xs ink-muted mono-font">{formatBytes(pdf.size)}</span>
+                <button onClick={() => onSelectPdf(pdf.id)} title="보기"><Icon name="eye" size={14} /></button>
+                <button onClick={() => onRemovePdf(pdf.id)} title="삭제"><Icon name="trash" size={14} /></button>
+              </div>
+            ))}
+            <button onClick={onAddPdf} className="btn-ghost px-3 py-2 text-sm flex items-center gap-2 mt-2">
+              <Icon name="plus" size={14} strokeWidth={2} />PDF 추가
+            </button>
           </div>
         ) : (
-          <textarea className="free-textarea" value={note.freeContent}
-            onChange={e => onUpdate({ freeContent: e.target.value })}
-            placeholder="여기에 자유롭게 작성하세요. 강의 내용, 책에서 본 것, 떠오르는 생각, 모르는 거... 무엇이든." />
-        )
+          <div
+            className={`pdf-attach-zone ${dragging ? 'dragging' : ''}`}
+            onClick={onAddPdf}
+            onDragOver={e => { e.preventDefault(); setDragging(true); }}
+            onDragLeave={() => setDragging(false)}
+            onDrop={handleDrop}
+          >
+            <div className="flex flex-col items-center gap-2">
+              <Icon name="upload" size={24} className="ink-muted" />
+              <p className="text-sm body-font ink-text">PDF 파일 선택 또는 드래그</p>
+              <p className="text-xs ink-muted body-font italic">강의자료, 교재, 참고문서 등을 첨부하면 분할 화면으로 보면서 작성 가능</p>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div className="my-6 w-full h-px" style={{ background: 'var(--border)' }}></div>
+
+      {/* 본문 작성 */}
+      <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+        <div className="mode-toggle">
+          <button onClick={() => onUpdate({ mode: 'free' })} className={note.mode === 'free' ? 'active' : ''}>자유</button>
+          <button onClick={() => onUpdate({ mode: 'sections' })} className={note.mode === 'sections' ? 'active' : ''}>섹션</button>
+        </div>
+        <div className="text-xs ink-muted body-font italic">
+          {note.mode === 'free' ? '자유롭게 다 쏟아내세요' : '주제별로 분류해서 작성'}
+        </div>
+      </div>
+
+      {note.mode === 'free' && (
+        <textarea className="free-textarea" value={note.freeContent}
+          onChange={e => onUpdate({ freeContent: e.target.value })}
+          placeholder="여기에 자유롭게 작성하세요. 강의 내용, 책에서 본 것, 떠오르는 생각, 모르는 거... 무엇이든." />
       )}
+
       {note.mode === 'sections' && (
         <div>
           {note.sections.map((section, idx) => (
@@ -822,139 +910,29 @@ function OriginalView({ note, onUpdate, isLocked }) {
               onDelete={() => {
                 if (!confirm('이 섹션을 삭제할까요?')) return;
                 onUpdate({ sections: note.sections.filter((_, i) => i !== idx) });
-              }}
-              isLocked={isLocked} />
+              }} />
           ))}
-          {!isLocked && (
-            <button onClick={() => onUpdate({ sections: [...note.sections, { id: Date.now().toString(), title: '새 섹션', content: '' }] })}
-              className="btn-ghost px-4 py-2 text-sm mono-font flex items-center gap-2">
-              <Icon name="plus" size={14} strokeWidth={2} />섹션 추가
-            </button>
-          )}
+          <button onClick={() => onUpdate({ sections: [...note.sections, { id: Date.now().toString(), title: '새 섹션', content: '' }] })}
+            className="btn-ghost px-4 py-2 text-sm mono-font flex items-center gap-2">
+            <Icon name="plus" size={14} strokeWidth={2} />섹션 추가
+          </button>
         </div>
       )}
     </div>
   );
 }
 
-function SectionBlock({ section, onTitleChange, onContentChange, onDelete, isLocked }) {
+function SectionBlock({ section, onTitleChange, onContentChange, onDelete }) {
   return (
     <div className="section-block">
       <div className="section-header">
-        {isLocked ? (
-          <h3 className="display-font font-bold text-lg ink-text">{section.title}</h3>
-        ) : (
-          <input type="text" value={section.title} onChange={e => onTitleChange(e.target.value)}
-            className="display-font font-bold text-lg ink-text flex-1"
-            style={{ background: 'transparent', border: 'none' }} />
-        )}
-        {!isLocked && <button onClick={onDelete} className="btn-ghost p-1"><Icon name="x" size={14} /></button>}
+        <input type="text" value={section.title} onChange={e => onTitleChange(e.target.value)}
+          className="display-font font-bold text-lg ink-text flex-1"
+          style={{ background: 'transparent', border: 'none' }} />
+        <button onClick={onDelete} className="btn-ghost p-1"><Icon name="x" size={14} /></button>
       </div>
-      {isLocked ? (
-        <div className="body-font text-base leading-relaxed whitespace-pre-wrap">
-          {section.content || <span className="ink-muted italic text-sm">(비어있음)</span>}
-        </div>
-      ) : (
-        <textarea className="section-textarea" value={section.content}
-          onChange={e => onContentChange(e.target.value)} placeholder="이 섹션 내용..." />
-      )}
-    </div>
-  );
-}
-
-function AnalysisView({ note, onAnalysisRequest, onAnalysisUpdate }) {
-  const [editingField, setEditingField] = useState(null);
-  const a = note.analysis;
-
-  return (
-    <div className="fade-in">
-      <div className="mb-8 p-4 md:p-5" style={{ background: 'var(--accent-soft)', border: '1.5px dashed var(--accent)' }}>
-        <div className="flex items-baseline gap-2 mb-2">
-          <Icon name="sparkles" size={14} className="accent" />
-          <h3 className="display-font font-bold text-base">Claude에게 분석·문제 요청</h3>
-        </div>
-        <p className="text-xs ink-muted body-font italic mb-4">
-          버튼을 누르면 노트 내용 + 요청사항이 클립보드에 복사됩니다. Claude 채팅창에 붙여넣고 답변을 받으면 아래 항목들에 채워넣으세요.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <RequestButton onClick={() => onAnalysisRequest('analyze')} label="📚 분석 요청" desc="요약+핵심+트렌드+이슈+링크" />
-          <RequestButton onClick={() => onAnalysisRequest('basic')} label="📝 기본 예상문제" desc="객관식+주관식 5개" />
-          <RequestButton onClick={() => onAnalysisRequest('applied')} label="🎯 응용 심화문제" desc="사례 적용형 3개" />
-          <RequestButton onClick={() => onAnalysisRequest('mixed')} label="🔥 혼합 출제" desc="기본+응용 모두" />
-        </div>
-      </div>
-      <AnalysisField label="요약" emoji="📝" value={a.summary}
-        onChange={v => onAnalysisUpdate('summary', v)}
-        editing={editingField === 'summary'} onEdit={() => setEditingField('summary')} onDone={() => setEditingField(null)}
-        placeholder="Claude의 요약 답변을 여기에 붙여넣으세요" />
-      <AnalysisField label="핵심 파악" emoji="🎯" value={a.core}
-        onChange={v => onAnalysisUpdate('core', v)}
-        editing={editingField === 'core'} onEdit={() => setEditingField('core')} onDone={() => setEditingField(null)}
-        placeholder="Claude의 핵심 파악 답변을 여기에" />
-      <AnalysisField label="최신 트렌드 + 자료" emoji="📰" value={a.trends}
-        onChange={v => onAnalysisUpdate('trends', v)}
-        editing={editingField === 'trends'} onEdit={() => setEditingField('trends')} onDone={() => setEditingField(null)}
-        placeholder="Claude의 트렌드 + 링크 답변을 여기에" />
-      <AnalysisField label="이슈" emoji="🔥" value={a.issues}
-        onChange={v => onAnalysisUpdate('issues', v)}
-        editing={editingField === 'issues'} onEdit={() => setEditingField('issues')} onDone={() => setEditingField(null)}
-        placeholder="Claude의 이슈/쟁점 답변을 여기에" />
-      <AnalysisField label="예상문제" emoji="📚" value={a.problems}
-        onChange={v => onAnalysisUpdate('problems', v)}
-        editing={editingField === 'problems'} onEdit={() => setEditingField('problems')} onDone={() => setEditingField(null)}
-        placeholder="Claude가 만들어준 예상문제 + 정답·해설을 여기에" />
-    </div>
-  );
-}
-
-function RequestButton({ onClick, label, desc }) {
-  const [hover, setHover] = useState(false);
-  return (
-    <button onClick={onClick}
-      onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
-      className="text-left p-3 transition-all w-full"
-      style={{
-        background: hover ? 'var(--accent)' : 'var(--bg-card)',
-        color: hover ? 'var(--bg-paper)' : 'var(--ink)',
-        border: '1.5px solid var(--border)', cursor: 'pointer'
-      }}>
-      <div className="flex items-center justify-between mb-0.5">
-        <span className="display-font font-bold text-sm">{label}</span>
-        <Icon name="copy" size={12} />
-      </div>
-      <div className="text-[11px] mono-font tracking-wider opacity-70">{desc}</div>
-    </button>
-  );
-}
-
-function AnalysisField({ label, emoji, value, onChange, editing, onEdit, onDone, placeholder }) {
-  const isEmpty = !value?.trim();
-  return (
-    <div className={isEmpty && !editing ? 'analysis-card-empty' : 'analysis-card'}>
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center gap-2">
-          <span style={{ fontSize: '16px' }}>{emoji}</span>
-          <span className="section-label">{label}</span>
-        </div>
-        {!editing ? (
-          <button onClick={onEdit} className="btn-ghost px-2 py-1 text-xs mono-font flex items-center gap-1">
-            <Icon name="edit" size={12} />{isEmpty ? 'ADD' : 'EDIT'}
-          </button>
-        ) : (
-          <button onClick={onDone} className="btn-primary px-3 py-1 text-xs mono-font flex items-center gap-1">
-            <Icon name="check" size={12} strokeWidth={2} />DONE
-          </button>
-        )}
-      </div>
-      {editing ? (
-        <textarea className="w-full text-base body-font leading-relaxed resize-none"
-          style={{ minHeight: '120px', background: 'transparent', border: '1px dashed var(--ink-muted)', padding: '8px' }}
-          value={value} onChange={e => onChange(e.target.value)} placeholder={placeholder} autoFocus />
-      ) : isEmpty ? (
-        <p className="text-sm ink-muted italic body-font">{placeholder}</p>
-      ) : (
-        <div className="body-font text-base leading-relaxed whitespace-pre-wrap">{value}</div>
-      )}
+      <textarea className="section-textarea" value={section.content}
+        onChange={e => onContentChange(e.target.value)} placeholder="이 섹션 내용..." />
     </div>
   );
 }
