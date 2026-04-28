@@ -11,320 +11,159 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;900&display=swap');
-
   * { box-sizing: border-box; }
   body { margin: 0; padding: 0; }
-
-  /* ============= 테마 변수 ============= */
-  /* Legal Pad — 클래식 노란 리갈패드 */
   [data-theme="legal"] {
-    --bg-app: #f4e9b8;
-    --bg-paper: #fff8d4;
-    --bg-card: #fffce8;
-    --bg-sidebar: #fff0a8;
-    --ink: #1a1a2e;
-    --ink-muted: #6b5e2f;
-    --accent: #c8102e;
-    --accent-soft: rgba(200, 16, 46, 0.08);
-    --line: rgba(200, 16, 46, 0.45);
-    --rule: rgba(108, 117, 200, 0.35);
-    --border: #1a1a2e;
-    --display-font: 'Caveat', Georgia, cursive;
-    --body-font: 'Lora', Georgia, serif;
-    --mono-font: 'JetBrains Mono', monospace;
-    --paper-style: legal;
-    --display-weight: 700;
-    --display-letter: -0.01em;
+    --bg-app: #f4e9b8; --bg-paper: #fff8d4; --bg-card: #fffce8; --bg-sidebar: #fff0a8;
+    --ink: #1a1a2e; --ink-muted: #6b5e2f; --accent: #c8102e; --accent-soft: rgba(200, 16, 46, 0.08);
+    --line: rgba(200, 16, 46, 0.45); --rule: rgba(108, 117, 200, 0.35); --border: #1a1a2e;
+    --display-font: 'Caveat', Georgia, cursive; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace;
+    --display-weight: 700; --display-letter: -0.01em;
   }
-  /* Developer — 코드 에디터 다크 */
   [data-theme="dev"] {
-    --bg-app: #0d1117;
-    --bg-paper: #161b22;
-    --bg-card: #1c2128;
-    --bg-sidebar: #0d1117;
-    --ink: #c9d1d9;
-    --ink-muted: #8b949e;
-    --accent: #39d353;
-    --accent-soft: rgba(57, 211, 83, 0.1);
-    --line: rgba(139, 148, 158, 0.2);
-    --rule: transparent;
-    --border: #30363d;
-    --display-font: 'JetBrains Mono', monospace;
-    --body-font: 'JetBrains Mono', monospace;
-    --mono-font: 'JetBrains Mono', monospace;
-    --paper-style: plain;
-    --display-weight: 700;
-    --display-letter: -0.02em;
+    --bg-app: #0d1117; --bg-paper: #161b22; --bg-card: #1c2128; --bg-sidebar: #0d1117;
+    --ink: #c9d1d9; --ink-muted: #8b949e; --accent: #39d353; --accent-soft: rgba(57, 211, 83, 0.1);
+    --line: rgba(139, 148, 158, 0.2); --rule: transparent; --border: #30363d;
+    --display-font: 'JetBrains Mono', monospace; --body-font: 'JetBrains Mono', monospace; --mono-font: 'JetBrains Mono', monospace;
+    --display-weight: 700; --display-letter: -0.02em;
   }
-  /* Light Paper — 깨끗한 종이 */
   [data-theme="light"] {
-    --bg-app: #f5f5f0;
-    --bg-paper: #ffffff;
-    --bg-card: #fafafa;
-    --bg-sidebar: #f0efe8;
-    --ink: #18181b;
-    --ink-muted: #71717a;
-    --accent: #18181b;
-    --accent-soft: rgba(24, 24, 27, 0.05);
-    --line: rgba(24, 24, 27, 0.1);
-    --rule: transparent;
-    --border: #18181b;
-    --display-font: 'Inter', sans-serif;
-    --body-font: 'Inter', sans-serif;
-    --mono-font: 'JetBrains Mono', monospace;
-    --paper-style: plain;
-    --display-weight: 900;
-    --display-letter: -0.04em;
+    --bg-app: #f5f5f0; --bg-paper: #ffffff; --bg-card: #fafafa; --bg-sidebar: #f0efe8;
+    --ink: #18181b; --ink-muted: #71717a; --accent: #18181b; --accent-soft: rgba(24, 24, 27, 0.05);
+    --line: rgba(24, 24, 27, 0.1); --rule: transparent; --border: #18181b;
+    --display-font: 'Inter', sans-serif; --body-font: 'Inter', sans-serif; --mono-font: 'JetBrains Mono', monospace;
+    --display-weight: 900; --display-letter: -0.04em;
   }
-  /* Midnight — 다크 네이비 */
   [data-theme="midnight"] {
-    --bg-app: #0f1729;
-    --bg-paper: #1a2238;
-    --bg-card: #232d4a;
-    --bg-sidebar: #0f1729;
-    --ink: #e0e7ff;
-    --ink-muted: #94a3b8;
-    --accent: #c4b5fd;
-    --accent-soft: rgba(196, 181, 253, 0.1);
-    --line: rgba(148, 163, 184, 0.2);
-    --rule: transparent;
-    --border: #334155;
-    --display-font: 'Fraunces', Georgia, serif;
-    --body-font: 'Lora', Georgia, serif;
-    --mono-font: 'JetBrains Mono', monospace;
-    --paper-style: plain;
-    --display-weight: 700;
-    --display-letter: -0.02em;
+    --bg-app: #0f1729; --bg-paper: #1a2238; --bg-card: #232d4a; --bg-sidebar: #0f1729;
+    --ink: #e0e7ff; --ink-muted: #94a3b8; --accent: #c4b5fd; --accent-soft: rgba(196, 181, 253, 0.1);
+    --line: rgba(148, 163, 184, 0.2); --rule: transparent; --border: #334155;
+    --display-font: 'Fraunces', Georgia, serif; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace;
+    --display-weight: 700; --display-letter: -0.02em;
   }
-  /* Solarized — 베이지+청록 */
   [data-theme="solar"] {
-    --bg-app: #fdf6e3;
-    --bg-paper: #fffbef;
-    --bg-card: #fdf6e3;
-    --bg-sidebar: #eee8d5;
-    --ink: #073642;
-    --ink-muted: #586e75;
-    --accent: #2aa198;
-    --accent-soft: rgba(42, 161, 152, 0.1);
-    --line: rgba(7, 54, 66, 0.15);
-    --rule: transparent;
-    --border: #073642;
-    --display-font: 'Fraunces', Georgia, serif;
-    --body-font: 'Lora', Georgia, serif;
-    --mono-font: 'JetBrains Mono', monospace;
-    --paper-style: plain;
-    --display-weight: 700;
-    --display-letter: -0.02em;
+    --bg-app: #fdf6e3; --bg-paper: #fffbef; --bg-card: #fdf6e3; --bg-sidebar: #eee8d5;
+    --ink: #073642; --ink-muted: #586e75; --accent: #2aa198; --accent-soft: rgba(42, 161, 152, 0.1);
+    --line: rgba(7, 54, 66, 0.15); --rule: transparent; --border: #073642;
+    --display-font: 'Fraunces', Georgia, serif; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace;
+    --display-weight: 700; --display-letter: -0.02em;
   }
-  /* Forest — 깊은 그린 */
   [data-theme="forest"] {
-    --bg-app: #f4ebd8;
-    --bg-paper: #faf3e3;
-    --bg-card: #f4ebd8;
-    --bg-sidebar: #ebe0c5;
-    --ink: #1a3622;
-    --ink-muted: #4d6b3f;
-    --accent: #d97706;
-    --accent-soft: rgba(217, 119, 6, 0.1);
-    --line: rgba(26, 54, 34, 0.2);
-    --rule: transparent;
-    --border: #1a3622;
-    --display-font: 'Fraunces', Georgia, serif;
-    --body-font: 'Lora', Georgia, serif;
-    --mono-font: 'JetBrains Mono', monospace;
-    --paper-style: plain;
-    --display-weight: 800;
-    --display-letter: -0.02em;
+    --bg-app: #f4ebd8; --bg-paper: #faf3e3; --bg-card: #f4ebd8; --bg-sidebar: #ebe0c5;
+    --ink: #1a3622; --ink-muted: #4d6b3f; --accent: #d97706; --accent-soft: rgba(217, 119, 6, 0.1);
+    --line: rgba(26, 54, 34, 0.2); --rule: transparent; --border: #1a3622;
+    --display-font: 'Fraunces', Georgia, serif; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace;
+    --display-weight: 800; --display-letter: -0.02em;
   }
-  /* Rosé — 따뜻한 로즈 */
   [data-theme="rose"] {
-    --bg-app: #fce7e0;
-    --bg-paper: #fef3ee;
-    --bg-card: #fce7e0;
-    --bg-sidebar: #f5d3c8;
-    --ink: #2d1b3d;
-    --ink-muted: #6b4f5e;
-    --accent: #be185d;
-    --accent-soft: rgba(190, 24, 93, 0.1);
-    --line: rgba(45, 27, 61, 0.15);
-    --rule: transparent;
-    --border: #2d1b3d;
-    --display-font: 'Fraunces', Georgia, serif;
-    --body-font: 'Lora', Georgia, serif;
-    --mono-font: 'JetBrains Mono', monospace;
-    --paper-style: plain;
-    --display-weight: 700;
-    --display-letter: -0.02em;
+    --bg-app: #fce7e0; --bg-paper: #fef3ee; --bg-card: #fce7e0; --bg-sidebar: #f5d3c8;
+    --ink: #2d1b3d; --ink-muted: #6b4f5e; --accent: #be185d; --accent-soft: rgba(190, 24, 93, 0.1);
+    --line: rgba(45, 27, 61, 0.15); --rule: transparent; --border: #2d1b3d;
+    --display-font: 'Fraunces', Georgia, serif; --body-font: 'Lora', Georgia, serif; --mono-font: 'JetBrains Mono', monospace;
+    --display-weight: 700; --display-letter: -0.02em;
   }
 
-  /* ============= 공통 스타일 ============= */
   body { background: var(--bg-app); color: var(--ink); font-family: var(--body-font); transition: background 0.3s; }
   .display-font { font-family: var(--display-font); font-weight: var(--display-weight); letter-spacing: var(--display-letter); }
   .body-font { font-family: var(--body-font); }
   .mono-font { font-family: var(--mono-font); }
-
   .ink-text { color: var(--ink); }
   .ink-muted { color: var(--ink-muted); }
   .accent { color: var(--accent); }
   .accent-bg { background-color: var(--accent); }
 
-  /* 페이퍼 스타일 - 리갈패드일 때만 가로선 */
-  .paper {
-    background-color: var(--bg-paper);
-    transition: background 0.3s;
-  }
+  .paper { background-color: var(--bg-paper); transition: background 0.3s; position: relative; }
   [data-theme="legal"] .paper {
-    background-image:
-      linear-gradient(transparent 31px, var(--rule) 31px, var(--rule) 32px, transparent 32px);
+    background-image: linear-gradient(transparent 31px, var(--rule) 31px, var(--rule) 32px, transparent 32px);
     background-size: 100% 32px;
-    background-position: 0 16px;
   }
-  [data-theme="legal"] .paper::before {
-    content: '';
-    position: absolute;
-    left: 60px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--line);
-    pointer-events: none;
-  }
-
-  /* 사이드바 */
   .sidebar-bg { background: var(--bg-sidebar); transition: background 0.3s; }
   [data-theme="legal"] .sidebar-bg {
     background-image: linear-gradient(transparent 27px, var(--rule) 27px, var(--rule) 28px, transparent 28px);
     background-size: 100% 28px;
   }
-
-  /* 입력 필드 */
   textarea, input { font-family: inherit; background: transparent; outline: none; color: var(--ink); }
   textarea::placeholder, input::placeholder { color: var(--ink-muted); opacity: 0.6; }
   textarea:focus, input:focus { background: var(--accent-soft); }
-
-  /* 노트 카드 */
-  .note-card {
-    background: var(--bg-card);
-    transition: all 0.2s ease;
-    border: 1.5px solid var(--border);
-  }
-  .note-card:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 4px 4px 0 var(--border);
-  }
-
-  /* 버튼 */
-  .btn-primary {
-    background: var(--ink);
-    color: var(--bg-paper);
-    transition: all 0.15s ease;
-    border: 1.5px solid var(--ink);
-    cursor: pointer;
-  }
+  .note-card { background: var(--bg-card); transition: all 0.2s; border: 1.5px solid var(--border); }
+  .note-card:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--border); }
+  .btn-primary { background: var(--ink); color: var(--bg-paper); transition: all 0.15s; border: 1.5px solid var(--ink); cursor: pointer; }
   .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
-
-  .btn-ghost { transition: all 0.15s ease; border: 1.5px solid transparent; cursor: pointer; color: var(--ink); }
+  .btn-accent { background: var(--accent); color: var(--bg-paper); transition: all 0.15s; border: 1.5px solid var(--accent); cursor: pointer; }
+  .btn-accent:hover { opacity: 0.85; }
+  .btn-ghost { transition: all 0.15s; border: 1.5px solid transparent; cursor: pointer; color: var(--ink); }
   .btn-ghost:hover { background: var(--accent-soft); border-color: var(--border); }
-
-  /* 강조 표시 */
-  .underline-decoration {
-    background-image: linear-gradient(to right, var(--accent), var(--accent));
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 3px;
-    padding-bottom: 2px;
-  }
-
   .star-btn { transition: transform 0.1s; cursor: pointer; background: none; border: none; padding: 0; }
   .star-btn:hover { transform: scale(1.2); }
-
-  .section-label {
-    font-family: var(--mono-font);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    font-size: 0.7rem;
-    color: var(--accent);
-    font-weight: 500;
-  }
-
-  /* 트리 들여쓰기 라인 */
-  .tree-line {
-    border-left: 1.5px solid var(--line);
-    padding-left: 4px;
-    margin-left: 8px;
-  }
-
-  /* 스크롤바 */
+  .section-label { font-family: var(--mono-font); text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.7rem; color: var(--accent); font-weight: 500; }
   ::-webkit-scrollbar { width: 8px; height: 8px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
-
-  /* 애니메이션 */
   @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes slideIn { from { transform: translateX(-100%); } to { transform: translateX(0); } }
   @keyframes toastIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   .fade-in { animation: fadeIn 0.3s ease-out; }
   .slide-in { animation: slideIn 0.25s ease-out; }
   .toast-in { animation: toastIn 0.3s ease-out; }
-
   @media (max-width: 768px) {
     .sidebar-mobile { position: fixed; top: 0; left: 0; height: 100vh; z-index: 50; box-shadow: 4px 0 20px rgba(0,0,0,0.15); }
     .sidebar-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 40; }
   }
-
   .icon { display: inline-block; vertical-align: middle; }
-
-  /* 테마 칩 */
-  .theme-chip {
-    width: 22px; height: 22px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: all 0.2s;
-    position: relative;
-  }
+  .theme-chip { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: all 0.2s; position: relative; }
   .theme-chip:hover { transform: scale(1.15); }
   .theme-chip.active { border-color: var(--ink); transform: scale(1.15); }
   .theme-chip.active::after {
-    content: '✓';
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 11px;
-    font-weight: bold;
-    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    content: '✓'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 11px; font-weight: bold; text-shadow: 0 0 2px rgba(0,0,0,0.5);
   }
+  .status-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; font-family: var(--mono-font); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; border: 1.5px solid; }
+  .status-draft { color: var(--ink-muted); border-color: var(--ink-muted); background: transparent; }
+  .status-locked { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+  .status-analyzed { color: var(--bg-paper); border-color: var(--accent); background: var(--accent); }
+  .mode-toggle { display: inline-flex; padding: 2px; background: var(--accent-soft); border: 1.5px solid var(--border); }
+  .mode-toggle button { padding: 6px 14px; font-family: var(--mono-font); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; border: none; background: transparent; color: var(--ink-muted); cursor: pointer; transition: all 0.15s; }
+  .mode-toggle button.active { background: var(--ink); color: var(--bg-paper); }
+  .tab-bar { display: flex; border-bottom: 2px solid var(--border); margin-bottom: 20px; }
+  .tab-bar button { padding: 10px 20px; background: transparent; border: none; cursor: pointer; font-family: var(--mono-font); font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-muted); border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.15s; }
+  .tab-bar button:hover { color: var(--ink); }
+  .tab-bar button.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .analysis-card { border: 1.5px solid var(--border); padding: 20px; margin-bottom: 16px; background: var(--bg-card); position: relative; }
+  .analysis-card-empty { border: 1.5px dashed var(--ink-muted); padding: 24px; margin-bottom: 16px; background: transparent; text-align: center; }
+  .free-textarea { width: 100%; min-height: 60vh; background: transparent; border: none; outline: none; font-family: var(--body-font); font-size: 16px; line-height: 1.8; color: var(--ink); resize: vertical; padding: 16px 0; }
+  [data-theme="legal"] .free-textarea { background-image: linear-gradient(transparent 27px, var(--rule) 27px, var(--rule) 28px, transparent 28px); background-size: 100% 28px; line-height: 28px; padding: 0; }
+  .section-block { margin-bottom: 24px; border-bottom: 1.5px solid var(--line); padding-bottom: 20px; }
+  .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .section-textarea { width: 100%; min-height: 100px; background: transparent; border: none; outline: none; font-family: var(--body-font); font-size: 15px; line-height: 1.7; color: var(--ink); resize: vertical; }
 </style>
 </head>
 <body>
 <div id="root"></div>
 <script type="text/babel" data-presets="env,react">
 const { useState, useEffect, useMemo, useRef } = React;
-
 const storage = {
   get: (key) => { try { const v = localStorage.getItem(key); return v ? { value: v } : null; } catch { return null; } },
   set: (key, value) => { try { localStorage.setItem(key, value); return { value }; } catch { return null; } }
 };
-
-// 테마 정의
 const THEMES = [
-  { id: 'legal',    name: 'Legal Pad',  color1: '#f4e9b8', color2: '#c8102e' },
-  { id: 'dev',      name: 'Developer',  color1: '#0d1117', color2: '#39d353' },
-  { id: 'light',    name: 'Light',      color1: '#ffffff', color2: '#18181b' },
-  { id: 'midnight', name: 'Midnight',   color1: '#0f1729', color2: '#c4b5fd' },
-  { id: 'solar',    name: 'Solarized',  color1: '#fdf6e3', color2: '#2aa198' },
-  { id: 'forest',   name: 'Forest',     color1: '#1a3622', color2: '#d97706' },
-  { id: 'rose',     name: 'Rosé',       color1: '#fce7e0', color2: '#be185d' }
+  { id: 'legal', name: 'Legal Pad', color1: '#f4e9b8', color2: '#c8102e' },
+  { id: 'dev', name: 'Developer', color1: '#0d1117', color2: '#39d353' },
+  { id: 'light', name: 'Light', color1: '#ffffff', color2: '#18181b' },
+  { id: 'midnight', name: 'Midnight', color1: '#0f1729', color2: '#c4b5fd' },
+  { id: 'solar', name: 'Solarized', color1: '#fdf6e3', color2: '#2aa198' },
+  { id: 'forest', name: 'Forest', color1: '#1a3622', color2: '#d97706' },
+  { id: 'rose', name: 'Rosé', color1: '#fce7e0', color2: '#be185d' }
+];
+const DEFAULT_SECTIONS = [
+  { id: 'lecture', title: '강의 내용' },
+  { id: 'book', title: '책/자료' },
+  { id: 'thoughts', title: '내 생각/요약' },
+  { id: 'questions', title: '질문/모르는 것' }
 ];
 
-// SVG 아이콘 (Lucide style)
 const Icon = ({ name, className = "icon", size = 16, strokeWidth = 1.5, fill = "none" }) => {
   const paths = {
     book: <><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></>,
-    folder: <><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></>,
     folderPlus: <><path d="M12 10v6"/><path d="M9 13h6"/><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></>,
     plus: <><path d="M5 12h14"/><path d="M12 5v14"/></>,
     search: <><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></>,
@@ -335,15 +174,15 @@ const Icon = ({ name, className = "icon", size = 16, strokeWidth = 1.5, fill = "
     chevronRight: <><path d="m9 18 6-6-6-6"/></>,
     chevronDown: <><path d="m6 9 6 6 6-6"/></>,
     star: <><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></>,
-    extLink: <><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></>,
     x: <><path d="M18 6 6 18"/><path d="m6 6 12 12"/></>,
     file: <><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></>,
     sparkles: <><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></>,
-    tag: <><path d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></>,
     download: <><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></>,
     upload: <><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></>,
     menu: <><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></>,
-    palette: <><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></>
+    palette: <><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></>,
+    lock: <><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></>,
+    unlock: <><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></>
   };
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill={fill} stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -351,10 +190,6 @@ const Icon = ({ name, className = "icon", size = 16, strokeWidth = 1.5, fill = "
     </svg>
   );
 };
-
-// ============= 트리 데이터 헬퍼 =============
-// folder 구조: { id, name, parentId, notes, createdAt }
-// parentId가 null이면 최상위, 아니면 하위 폴더
 
 const findFolder = (folders, id) => folders.find(f => f.id === id);
 const getChildren = (folders, parentId) => folders.filter(f => f.parentId === parentId);
@@ -365,21 +200,40 @@ const getDescendantIds = (folders, parentId) => {
   return ids;
 };
 
-// 마이그레이션: 기존 데이터(parentId 없음) → 트리 구조
+// 마이그레이션: 구버전 노트 → 신버전
+const migrateNote = (note) => {
+  if (note.mode !== undefined && note.status !== undefined) return note;
+  const oldContent = [
+    note.summary && `[요약]\n${note.summary}`,
+    note.core && `[핵심]\n${note.core}`,
+    note.issues && `[이슈]\n${note.issues}`,
+    note.trends && `[트렌드]\n${note.trends}`
+  ].filter(Boolean).join('\n\n');
+  const oldLinks = note.links?.filter(l => l.url) || [];
+  const linksText = oldLinks.length ? '\n\n[링크]\n' + oldLinks.map(l => `- ${l.title || l.url}: ${l.url}`).join('\n') : '';
+  return {
+    id: note.id, title: note.title || '제목 없음',
+    mode: 'free', freeContent: oldContent + linksText,
+    sections: DEFAULT_SECTIONS.map(s => ({ ...s, content: '' })),
+    status: 'draft', lockedAt: null, analyzedAt: null,
+    analysis: { summary: note.summary || '', core: note.core || '', trends: note.trends || '', issues: note.issues || '', problems: '' },
+    examRate: note.examRate || 0, isExam: note.isExam || false, tags: note.tags || [],
+    createdAt: note.createdAt, updatedAt: note.updatedAt
+  };
+};
 const migrateFolders = (folders) => folders.map(f => ({
   ...f,
-  parentId: f.parentId !== undefined ? f.parentId : null
+  parentId: f.parentId !== undefined ? f.parentId : null,
+  notes: (f.notes || []).map(migrateNote)
 }));
 
 function StudyNotebook() {
   const [folders, setFolders] = useState([]);
   const [activeFolder, setActiveFolder] = useState(null);
   const [activeNote, setActiveNote] = useState(null);
-  const [view, setView] = useState('list');
   const [search, setSearch] = useState('');
   const [expandedFolders, setExpandedFolders] = useState({});
-  const [copied, setCopied] = useState(false);
-  const [newFolderParent, setNewFolderParent] = useState(undefined); // undefined = 닫힘, null = 최상위, 'id' = 하위
+  const [newFolderParent, setNewFolderParent] = useState(undefined);
   const [newFolderName, setNewFolderName] = useState('');
   const [renamingFolder, setRenamingFolder] = useState(null);
   const [renameValue, setRenameValue] = useState('');
@@ -390,7 +244,6 @@ function StudyNotebook() {
   const [showThemes, setShowThemes] = useState(false);
   const fileInputRef = useRef(null);
 
-  // 초기 로드
   useEffect(() => {
     const result = storage.get('notebook-data');
     if (result?.value) {
@@ -401,19 +254,15 @@ function StudyNotebook() {
       } catch {}
     }
     const savedTheme = storage.get('notebook-theme');
-    if (savedTheme?.value && THEMES.find(t => t.id === savedTheme.value)) {
-      setTheme(savedTheme.value);
-    }
+    if (savedTheme?.value && THEMES.find(t => t.id === savedTheme.value)) setTheme(savedTheme.value);
     setLoaded(true);
   }, []);
 
-  // 자동 저장
   useEffect(() => {
     if (!loaded) return;
     storage.set('notebook-data', JSON.stringify({ folders, expanded: expandedFolders }));
   }, [folders, expandedFolders, loaded]);
 
-  // 테마 저장 + 적용
   useEffect(() => {
     if (loaded) storage.set('notebook-theme', theme);
     document.documentElement.setAttribute('data-theme', theme);
@@ -421,16 +270,13 @@ function StudyNotebook() {
 
   const showToast = (msg) => { setToast(msg); setTimeout(() => setToast(''), 2500); };
 
-  // 백업/복원
   const exportData = () => {
-    const data = { version: 2, exportedAt: new Date().toISOString(), folders, expanded: expandedFolders };
+    const data = { version: 3, exportedAt: new Date().toISOString(), folders, expanded: expandedFolders };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url;
-    a.download = `study-notebook-${new Date().toISOString().slice(0, 10)}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
+    a.href = url; a.download = `study-notebook-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click(); URL.revokeObjectURL(url);
     showToast('백업 완료');
   };
 
@@ -445,45 +291,32 @@ function StudyNotebook() {
         const migrated = migrateFolders(data.folders);
         const totalNotes = migrated.reduce((s, f) => s + (f.notes?.length || 0), 0);
         if (!confirm(`${migrated.length}개 폴더, ${totalNotes}개 노트.\n\n[확인] = 추가\n[취소] = 전체 교체`)) {
-          setFolders(migrated);
-          setExpandedFolders(data.expanded || {});
+          setFolders(migrated); setExpandedFolders(data.expanded || {});
           showToast('전체 교체 완료');
         } else {
           setFolders([...folders, ...migrated]);
           setExpandedFolders({ ...expandedFolders, ...(data.expanded || {}) });
           showToast(`${migrated.length}개 폴더 추가`);
         }
-      } catch (err) {
-        alert('잘못된 파일입니다.');
-      }
+      } catch (err) { alert('잘못된 파일입니다.'); }
     };
     reader.readAsText(file);
     e.target.value = '';
   };
 
-  // 폴더 생성
   const startCreateFolder = (parentId) => {
-    setNewFolderParent(parentId);
-    setNewFolderName('');
+    setNewFolderParent(parentId); setNewFolderName('');
     if (parentId) setExpandedFolders({ ...expandedFolders, [parentId]: true });
   };
 
   const createFolder = () => {
     if (!newFolderName.trim()) { setNewFolderParent(undefined); return; }
-    const newFolder = {
-      id: Date.now().toString(),
-      name: newFolderName.trim(),
-      parentId: newFolderParent === null ? null : newFolderParent,
-      notes: [],
-      createdAt: new Date().toISOString()
-    };
+    const newFolder = { id: Date.now().toString(), name: newFolderName.trim(), parentId: newFolderParent === null ? null : newFolderParent, notes: [], createdAt: new Date().toISOString() };
     setFolders([...folders, newFolder]);
     setExpandedFolders({ ...expandedFolders, [newFolder.id]: true });
-    setNewFolderName('');
-    setNewFolderParent(undefined);
+    setNewFolderName(''); setNewFolderParent(undefined);
   };
 
-  // 폴더 삭제 (하위 폴더 + 노트 모두 삭제)
   const deleteFolder = (folderId) => {
     const folder = findFolder(folders, folderId);
     const descendantIds = getDescendantIds(folders, folderId);
@@ -491,42 +324,34 @@ function StudyNotebook() {
     const totalNotes = folders.filter(f => allIds.includes(f.id)).reduce((s, f) => s + f.notes.length, 0);
     const childrenCount = descendantIds.length;
     const msg = childrenCount > 0
-      ? `"${folder.name}"을 삭제할까요?\n\n하위 폴더 ${childrenCount}개와 노트 ${totalNotes}개도 함께 삭제됩니다.`
-      : `"${folder.name}"을 삭제할까요?${totalNotes > 0 ? `\n\n노트 ${totalNotes}개도 함께 삭제됩니다.` : ''}`;
+      ? `"${folder.name}"을 삭제할까요?\n\n하위 폴더 ${childrenCount}개와 노트 ${totalNotes}개도 삭제됩니다.`
+      : `"${folder.name}"을 삭제할까요?${totalNotes > 0 ? `\n\n노트 ${totalNotes}개도 삭제됩니다.` : ''}`;
     if (!confirm(msg)) return;
     setFolders(folders.filter(f => !allIds.includes(f.id)));
-    if (allIds.includes(activeFolder)) {
-      setActiveFolder(null); setActiveNote(null); setView('list');
-    }
+    if (allIds.includes(activeFolder)) { setActiveFolder(null); setActiveNote(null); }
   };
 
-  // 폴더 이름 변경
   const startRename = (folderId) => {
-    const folder = findFolder(folders, folderId);
-    setRenamingFolder(folderId);
-    setRenameValue(folder.name);
+    setRenamingFolder(folderId); setRenameValue(findFolder(folders, folderId).name);
   };
-
   const commitRename = () => {
     if (!renameValue.trim()) { setRenamingFolder(null); return; }
     setFolders(folders.map(f => f.id === renamingFolder ? { ...f, name: renameValue.trim() } : f));
-    setRenamingFolder(null);
-    setRenameValue('');
+    setRenamingFolder(null); setRenameValue('');
   };
 
-  // 노트 CRUD
   const createNote = (folderId) => {
     const newNote = {
       id: Date.now().toString(), title: '제목 없음',
-      summary: '', core: '', issues: '', trends: '',
-      examRate: 0, tags: [], links: [], isExam: false,
+      mode: 'free', freeContent: '',
+      sections: DEFAULT_SECTIONS.map(s => ({ ...s, content: '' })),
+      status: 'draft', lockedAt: null, analyzedAt: null,
+      analysis: { summary: '', core: '', trends: '', issues: '', problems: '' },
+      examRate: 0, isExam: false, tags: [],
       createdAt: new Date().toISOString(), updatedAt: new Date().toISOString()
     };
     setFolders(folders.map(f => f.id === folderId ? { ...f, notes: [...f.notes, newNote] } : f));
-    setActiveFolder(folderId);
-    setActiveNote(newNote.id);
-    setView('edit');
-    setSidebarOpen(false);
+    setActiveFolder(folderId); setActiveNote(newNote.id); setSidebarOpen(false);
   };
 
   const updateNote = (folderId, noteId, updates) => {
@@ -538,40 +363,11 @@ function StudyNotebook() {
   const deleteNote = (folderId, noteId) => {
     if (!confirm('이 노트를 삭제할까요?')) return;
     setFolders(folders.map(f => f.id === folderId ? { ...f, notes: f.notes.filter(n => n.id !== noteId) } : f));
-    if (activeNote === noteId) { setActiveNote(null); setView('list'); }
+    if (activeNote === noteId) setActiveNote(null);
   };
 
   const currentFolder = findFolder(folders, activeFolder);
   const currentNote = currentFolder?.notes.find(n => n.id === activeNote);
-
-  // ============= 프롬프트 빌더 =============
-  const buildResearchPrompt = (mode) => {
-    if (!currentNote) return '';
-    const topic = currentNote.title;
-    const tagInfo = currentNote.tags.length ? ` (분야/태그: ${currentNote.tags.join(', ')})` : '';
-    const formatGuide = `\n[답변 형식 — 반드시 아래 구조를 그대로 지켜주세요. 제가 노트에 항목별로 복사할 거예요.]`;
-    const requests = {
-      full: `"${topic}"${tagInfo}에 대한 학습 자료를 정리해주세요. 가능하면 웹 검색을 활용해서 최신 정보를 반영해주세요.\n${formatGuide}\n\n■ 요약\n(이 주제를 모르는 사람도 이해할 수 있게 한 문단으로. 3~5문장)\n\n■ 핵심 파악\n(반드시 알아야 할 핵심 개념들을 불릿 포인트 5~7개로. 각 항목은 1~2줄로 간결하게)\n\n■ 이슈가 될 만한 것들\n(논쟁점·쟁점·자주 헷갈리는 부분·비판적 시각 3~5개를 불릿 포인트로)\n\n■ 최신 트렌드\n(최근 1~2년 내 동향, 새로운 변화, 업데이트 3~5개를 불릿 포인트로. 가능하면 시점 명시)\n\n■ 관련 링크\n(공식 자료, 신뢰할 수 있는 출처 3~5개. "제목 - URL" 형식)`,
-      summary: `"${topic}"${tagInfo}에 대해 요약해주세요. 가능하면 웹 검색을 활용해서 최신 정보를 반영해주세요.\n${formatGuide}\n\n■ 요약\n(이 주제를 모르는 사람도 이해할 수 있게 한 문단으로. 3~5문장)\n\n■ 핵심 파악\n(반드시 알아야 할 핵심 개념들을 불릿 포인트 5~7개로)`,
-      trends: `"${topic}"${tagInfo}의 최신 트렌드를 알려주세요. 반드시 웹 검색을 활용해서 최근 1~2년 내 정보를 반영해주세요.\n${formatGuide}\n\n■ 최신 트렌드\n(최근 1~2년 내 동향 5~7개를 불릿 포인트로. 각 항목에 시점 명시)\n\n■ 관련 링크\n(출처 3~5개. "제목 - URL" 형식)`,
-      issues: `"${topic}"${tagInfo}와 관련된 이슈와 쟁점을 정리해주세요. 가능하면 웹 검색을 활용해주세요.\n${formatGuide}\n\n■ 이슈가 될 만한 것들\n(논쟁점·쟁점·찬반 논리 5~7개. 각 이슈마다 어떤 입장들이 있는지 간단히)\n\n■ 관련 링크\n(출처 3~5개. "제목 - URL" 형식)`,
-      examPoints: `"${topic}"${tagInfo}에서 시험 출제 가능성이 높은 포인트를 분석해주세요. 가능하면 웹 검색으로 기출 경향을 참고해주세요.\n${formatGuide}\n\n■ 핵심 파악\n(시험 자주 출제 핵심 5~7개. 각 항목 옆에 빈도 ★★★★★ ~ ★)\n\n■ 이슈가 될 만한 것들\n(자주 헷갈리는 함정 포인트 3~5개)\n\n■ 출제 예상 포인트\n(이번 시험 출제 가능성 높은 항목 3~5개와 그 이유)`
-    };
-    return requests[mode];
-  };
-
-  const buildPrompt = (mode) => {
-    if (!currentNote) return '';
-    const links = currentNote.links.filter(l => l.url).map(l => `- ${l.title || l.url}: ${l.url}`).join('\n');
-    const noteContent = `[학습노트]\n제목: ${currentNote.title}\n${currentNote.tags.length ? `태그: ${currentNote.tags.join(', ')}\n` : ''}\n■ 요약\n${currentNote.summary || '(없음)'}\n\n■ 핵심\n${currentNote.core || '(없음)'}\n\n■ 이슈\n${currentNote.issues || '(없음)'}\n\n■ 최신 트렌드\n${currentNote.trends || '(없음)'}\n${currentNote.isExam ? `\n■ 출제율: ${'★'.repeat(currentNote.examRate)}${'☆'.repeat(5 - currentNote.examRate)}` : ''}\n${links ? `\n■ 관련 링크\n${links}` : ''}`;
-    const requests = {
-      basic: `위 노트를 바탕으로 예상문제 5개를 만들어주세요. 객관식 3개, 주관식 2개로 구성하고, 각 문제마다 해설과 정답도 함께 알려주세요.`,
-      applied: `위 노트의 핵심 내용을 응용한 심화 문제 3개를 만들어주세요. 단순 암기가 아닌 사례 적용·분석·비판적 사고를 요구하는 문제로 구성해주세요. 모범답안도 함께 제시해주세요.`,
-      both: `위 노트를 바탕으로 다음 두 가지를 만들어주세요:\n1) 기본 예상문제 3개 (객관식 + 정답·해설)\n2) 응용 심화문제 2개 (사례 적용형 + 모범답안)`,
-      review: `위 노트를 검토하고 다음을 알려주세요:\n1) 보완하면 좋을 부분\n2) 추가로 정리해야 할 핵심 개념\n3) 자주 묻는 질문(FAQ) 3가지와 답변`
-    };
-    return `${noteContent}\n\n---\n\n${requests[mode]}`;
-  };
 
   const copyText = (text, msg) => {
     const fallback = () => {
@@ -580,36 +376,70 @@ function StudyNotebook() {
       document.execCommand('copy'); document.body.removeChild(ta);
     };
     if (navigator.clipboard?.writeText) {
-      navigator.clipboard.writeText(text).then(() => msg ? showToast(msg) : null).catch(fallback);
-    } else { fallback(); }
+      navigator.clipboard.writeText(text).then(() => msg && showToast(msg)).catch(fallback);
+    } else { fallback(); if (msg) showToast(msg); }
   };
 
-  const copyPrompt = (mode) => {
-    copyText(buildPrompt(mode));
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const extractContent = (note) => {
+    if (note.mode === 'free') return note.freeContent || '';
+    return note.sections.filter(s => s.content?.trim()).map(s => `[${s.title}]\n${s.content}`).join('\n\n');
   };
-  const copyResearchPrompt = (mode) => copyText(buildResearchPrompt(mode), '자료조사 프롬프트 복사 완료');
 
-  // ============= 검색 =============
+  const buildAnalysisPrompt = (note, mode) => {
+    const content = extractContent(note);
+    const tagInfo = note.tags?.length ? ` (분야/태그: ${note.tags.join(', ')})` : '';
+    const noteHeader = `[학습 노트]\n제목: ${note.title}${tagInfo}\n\n${content}\n\n---\n\n`;
+    const requests = {
+      analyze: `위는 제가 공부하면서 작성한 노트입니다. 가능하면 웹 검색을 활용해서 최신 정보를 반영하여 다음 형식대로 정리해주세요.\n\n[답변 형식 — 반드시 아래 헤더 그대로 사용]\n\n■ 요약\n(이 주제를 한 문단으로. 3~5문장. 노트 내용 기반으로 요약하되 부족한 부분은 보충)\n\n■ 핵심 파악\n(반드시 알아야 할 핵심 개념 5~7개. 불릿 포인트로. 각 1~2줄)\n\n■ 최신 트렌드\n(최근 1~2년 내 동향, 변화, 업데이트 3~5개. 가능하면 시점 명시)\n\n■ 이슈가 될 만한 것들\n(논쟁점·자주 헷갈리는 부분·비판적 시각 3~5개)\n\n■ 관련 링크\n(공식 자료, 신뢰할 수 있는 출처 3~5개. "제목 - URL" 형식)`,
+      basic: `위 노트를 바탕으로 예상문제 5개를 만들어주세요.\n- 객관식 3개 (선택지 4개씩)\n- 주관식 2개\n- 각 문제마다 정답과 해설 포함\n\n[답변 형식]\n■ 예상문제\n(문제들 + 정답 + 해설)`,
+      applied: `위 노트의 내용을 응용한 심화 문제 3개를 만들어주세요.\n- 단순 암기 X\n- 사례 적용·분석·비판적 사고를 요구하는 문제\n- 모범답안 포함\n\n[답변 형식]\n■ 응용 문제\n(문제들 + 모범답안)`,
+      mixed: `위 노트를 바탕으로 다음을 모두 만들어주세요:\n1) 기본 예상문제 3개 (객관식 + 정답·해설)\n2) 응용 심화문제 2개 (사례 적용형 + 모범답안)\n\n[답변 형식]\n■ 예상문제\n(기본 + 응용 모두 포함)`
+    };
+    return noteHeader + requests[mode];
+  };
+
+  const lockNote = () => {
+    if (!confirm('이 노트를 마감할까요?\n마감 후에도 [다시 편집]으로 수정 가능합니다.')) return;
+    updateNote(activeFolder, activeNote, { status: 'locked', lockedAt: new Date().toISOString() });
+    showToast('마감 완료');
+  };
+
+  const unlockNote = () => {
+    if (currentNote.status === 'analyzed') {
+      if (!confirm('다시 편집하면 분석 결과는 유지됩니다.\n계속할까요?')) return;
+    }
+    updateNote(activeFolder, activeNote, { status: 'draft' });
+    showToast('편집 모드로 전환');
+  };
+
+  const requestAnalysis = (mode) => {
+    const text = buildAnalysisPrompt(currentNote, mode);
+    copyText(text, mode === 'analyze' ? '분석 요청 복사 완료' : '문제 요청 복사 완료');
+  };
+
+  const updateAnalysis = (field, value) => {
+    const newStatus = (currentNote.status === 'locked' || currentNote.status === 'analyzed') && value?.trim()
+      ? 'analyzed' : currentNote.status;
+    updateNote(activeFolder, activeNote, {
+      analysis: { ...currentNote.analysis, [field]: value },
+      analyzedAt: value?.trim() ? new Date().toISOString() : currentNote.analyzedAt,
+      status: newStatus
+    });
+  };
+
   const matchingNoteIds = useMemo(() => {
     if (!search.trim()) return null;
     const q = search.toLowerCase();
     const ids = new Set();
     folders.forEach(f => {
       f.notes.forEach(n => {
-        if (n.title.toLowerCase().includes(q) ||
-            n.summary.toLowerCase().includes(q) ||
-            n.core.toLowerCase().includes(q) ||
-            n.tags.some(t => t.toLowerCase().includes(q))) {
-          ids.add(n.id);
-        }
+        const fullText = (n.title + ' ' + (n.freeContent || '') + ' ' + (n.sections?.map(s => s.content).join(' ') || '') + ' ' + (n.tags?.join(' ') || '')).toLowerCase();
+        if (fullText.includes(q)) ids.add(n.id);
       });
     });
     return ids;
   }, [folders, search]);
 
-  // 검색어가 있을 때 매치된 노트의 부모 폴더들도 표시되어야 함
   const visibleFolderIds = useMemo(() => {
     if (!matchingNoteIds) return null;
     const visible = new Set();
@@ -619,7 +449,6 @@ function StudyNotebook() {
       const nameMatch = f.name.toLowerCase().includes(q);
       if (hasMatch || nameMatch) {
         visible.add(f.id);
-        // 모든 조상 폴더도 표시
         let cur = f;
         while (cur.parentId) {
           visible.add(cur.parentId);
@@ -633,90 +462,61 @@ function StudyNotebook() {
 
   const totalNotes = folders.reduce((sum, f) => sum + f.notes.length, 0);
 
-  // ============= 트리 렌더링 =============
   const renderFolderTree = (parentId, depth = 0) => {
     const children = getChildren(folders, parentId);
-    if (children.length === 0 && depth === 0 && !newFolderParent) return null;
     return children.map(folder => {
       if (visibleFolderIds && !visibleFolderIds.has(folder.id)) return null;
       const isExpanded = expandedFolders[folder.id];
-      const hasChildren = getChildren(folders, folder.id).length > 0;
-      const filteredNotes = matchingNoteIds
-        ? folder.notes.filter(n => matchingNoteIds.has(n.id))
-        : folder.notes;
-
+      const filteredNotes = matchingNoteIds ? folder.notes.filter(n => matchingNoteIds.has(n.id)) : folder.notes;
       return (
         <div key={folder.id}>
           <div className="flex items-center group" style={{ paddingLeft: `${depth * 12}px` }}>
-            <button
-              onClick={() => setExpandedFolders({ ...expandedFolders, [folder.id]: !isExpanded })}
-              className="flex items-center gap-1 flex-1 px-2 py-1.5 btn-ghost text-sm min-w-0"
-            >
+            <button onClick={() => setExpandedFolders({ ...expandedFolders, [folder.id]: !isExpanded })}
+              className="flex items-center gap-1 flex-1 px-2 py-1.5 btn-ghost text-sm min-w-0">
               <Icon name={isExpanded ? 'chevronDown' : 'chevronRight'} size={14} strokeWidth={2} />
               {renamingFolder === folder.id ? (
-                <input
-                  autoFocus type="text" value={renameValue}
+                <input autoFocus type="text" value={renameValue}
                   onChange={e => setRenameValue(e.target.value)}
-                  onKeyDown={e => {
-                    if (e.key === 'Enter') commitRename();
-                    if (e.key === 'Escape') { setRenamingFolder(null); }
-                  }}
-                  onBlur={commitRename}
-                  onClick={e => e.stopPropagation()}
+                  onKeyDown={e => { if (e.key === 'Enter') commitRename(); if (e.key === 'Escape') setRenamingFolder(null); }}
+                  onBlur={commitRename} onClick={e => e.stopPropagation()}
                   className="display-font font-semibold flex-1 px-1"
-                  style={{ background: 'var(--accent-soft)', border: '1px solid var(--border)', minWidth: 0 }}
-                />
+                  style={{ background: 'var(--accent-soft)', border: '1px solid var(--border)', minWidth: 0 }} />
               ) : (
                 <span className="display-font font-semibold truncate" style={{ fontSize: '15px' }}>{folder.name}</span>
               )}
-              <span className="ml-auto text-xs ink-muted mono-font flex-shrink-0">
-                {hasChildren ? `${getChildren(folders, folder.id).length}` : ''}
-                {hasChildren && filteredNotes.length > 0 ? '·' : ''}
-                {filteredNotes.length > 0 ? filteredNotes.length : (hasChildren ? '' : (folder.notes.length || ''))}
-              </span>
+              <span className="ml-auto text-xs ink-muted mono-font flex-shrink-0">{folder.notes.length || ''}</span>
             </button>
-            <button onClick={() => createNote(folder.id)} className="md:opacity-0 md:group-hover:opacity-100 p-1 btn-ghost flex-shrink-0" title="노트 추가">
-              <Icon name="plus" size={14} strokeWidth={2} />
-            </button>
-            <button onClick={() => startCreateFolder(folder.id)} className="md:opacity-0 md:group-hover:opacity-100 p-1 btn-ghost flex-shrink-0" title="하위 폴더">
-              <Icon name="folderPlus" size={14} />
-            </button>
-            <button onClick={() => startRename(folder.id)} className="md:opacity-0 md:group-hover:opacity-100 p-1 btn-ghost flex-shrink-0" title="이름 변경">
-              <Icon name="edit" size={14} />
-            </button>
-            <button onClick={() => deleteFolder(folder.id)} className="md:opacity-0 md:group-hover:opacity-100 p-1 btn-ghost flex-shrink-0" title="삭제">
-              <Icon name="trash" size={14} />
-            </button>
+            <button onClick={() => createNote(folder.id)} className="md:opacity-0 md:group-hover:opacity-100 p-1 btn-ghost flex-shrink-0" title="노트 추가"><Icon name="plus" size={14} strokeWidth={2} /></button>
+            <button onClick={() => startCreateFolder(folder.id)} className="md:opacity-0 md:group-hover:opacity-100 p-1 btn-ghost flex-shrink-0" title="하위 폴더"><Icon name="folderPlus" size={14} /></button>
+            <button onClick={() => startRename(folder.id)} className="md:opacity-0 md:group-hover:opacity-100 p-1 btn-ghost flex-shrink-0" title="이름 변경"><Icon name="edit" size={14} /></button>
+            <button onClick={() => deleteFolder(folder.id)} className="md:opacity-0 md:group-hover:opacity-100 p-1 btn-ghost flex-shrink-0" title="삭제"><Icon name="trash" size={14} /></button>
           </div>
           {isExpanded && (
             <div className="fade-in">
-              {/* 노트 목록 */}
               {filteredNotes.length > 0 && (
-                <div style={{ paddingLeft: `${(depth + 1) * 12 + 8}px` }} className="border-l ml-3" style={{ borderColor: 'var(--line)', paddingLeft: `${(depth + 1) * 12 + 8}px` }}>
-                  {filteredNotes.map(note => (
-                    <button key={note.id}
-                      onClick={() => { setActiveFolder(folder.id); setActiveNote(note.id); setView('read'); setSidebarOpen(false); }}
-                      className={`w-full text-left px-2 py-1.5 text-sm flex items-center gap-2 ${activeNote === note.id ? 'accent-bg' : 'btn-ghost'}`}
-                      style={activeNote === note.id ? { color: 'var(--bg-paper)' } : {}}>
-                      {note.isExam && <Icon name="star" size={12} strokeWidth={1.5} fill="currentColor" />}
-                      <span className="truncate body-font">{note.title}</span>
-                    </button>
-                  ))}
+                <div style={{ paddingLeft: `${(depth + 1) * 12 + 8}px` }}>
+                  {filteredNotes.map(note => {
+                    const statusIcon = note.status === 'analyzed' ? '✨' : note.status === 'locked' ? '🔒' : '✏️';
+                    return (
+                      <button key={note.id}
+                        onClick={() => { setActiveFolder(folder.id); setActiveNote(note.id); setSidebarOpen(false); }}
+                        className={`w-full text-left px-2 py-1.5 text-sm flex items-center gap-2 ${activeNote === note.id ? 'accent-bg' : 'btn-ghost'}`}
+                        style={activeNote === note.id ? { color: 'var(--bg-paper)' } : {}}>
+                        <span style={{ fontSize: '11px' }}>{statusIcon}</span>
+                        {note.isExam && <Icon name="star" size={12} strokeWidth={1.5} fill="currentColor" />}
+                        <span className="truncate body-font">{note.title}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               )}
-              {/* 하위 폴더 재귀 */}
               {renderFolderTree(folder.id, depth + 1)}
-              {/* 새 하위 폴더 입력 */}
               {newFolderParent === folder.id && (
                 <div className="flex gap-1 fade-in py-1" style={{ paddingLeft: `${(depth + 1) * 12 + 8}px` }}>
                   <input autoFocus type="text" value={newFolderName}
                     onChange={e => setNewFolderName(e.target.value)}
-                    onKeyDown={e => {
-                      if (e.key === 'Enter') createFolder();
-                      if (e.key === 'Escape') setNewFolderParent(undefined);
-                    }}
-                    onBlur={createFolder}
-                    placeholder="하위 폴더명" className="flex-1 px-2 py-1 text-sm"
+                    onKeyDown={e => { if (e.key === 'Enter') createFolder(); if (e.key === 'Escape') setNewFolderParent(undefined); }}
+                    onBlur={createFolder} placeholder="하위 폴더명" className="flex-1 px-2 py-1 text-sm"
                     style={{ border: '1.5px solid var(--border)', background: 'var(--bg-card)' }} />
                   <button onClick={createFolder} className="btn-primary px-2 text-xs mono-font">OK</button>
                 </div>
@@ -738,47 +538,32 @@ function StudyNotebook() {
         </div>
       )}
       <input ref={fileInputRef} type="file" accept=".json" onChange={importData} className="hidden" />
-
       <div className="flex h-screen overflow-hidden">
         {sidebarOpen && <div className="sidebar-overlay md:hidden" onClick={() => setSidebarOpen(false)} />}
-
         <aside className={`w-80 border-r-2 flex-col sidebar-bg ${sidebarOpen ? 'sidebar-mobile slide-in flex' : 'hidden md:flex'}`} style={{ borderColor: 'var(--border)' }}>
-          {/* Header */}
           <div className="p-6 border-b-2 flex items-start justify-between" style={{ borderColor: 'var(--border)' }}>
             <div>
               <div className="flex items-baseline gap-2 mb-1">
                 <Icon name="book" size={20} />
-                <h1 className="display-font ink-text tracking-tight" style={{ fontSize: theme === 'legal' ? '36px' : '24px', lineHeight: 1 }}>
-                  Study Notebook
-                </h1>
+                <h1 className="display-font ink-text tracking-tight" style={{ fontSize: theme === 'legal' ? '36px' : '24px', lineHeight: 1 }}>Study Notebook</h1>
               </div>
               <p className="text-xs ink-muted mono-font tracking-wider">{folders.length} FOLDERS · {totalNotes} NOTES</p>
             </div>
-            <button onClick={() => setSidebarOpen(false)} className="md:hidden btn-ghost p-1">
-              <Icon name="x" size={20} />
-            </button>
+            <button onClick={() => setSidebarOpen(false)} className="md:hidden btn-ghost p-1"><Icon name="x" size={20} /></button>
           </div>
-
-          {/* Search */}
           <div className="p-4 border-b" style={{ borderColor: 'var(--line)' }}>
             <div className="flex items-center gap-2 px-3 py-2" style={{ border: '1.5px solid var(--border)', background: 'var(--bg-card)' }}>
               <Icon name="search" size={16} className="ink-muted" />
               <input type="text" value={search} onChange={e => setSearch(e.target.value)} placeholder="검색..." className="flex-1 text-sm" />
             </div>
           </div>
-
-          {/* Actions */}
           <div className="p-4 space-y-2">
             {newFolderParent === null ? (
               <div className="flex gap-1 fade-in">
                 <input autoFocus type="text" value={newFolderName}
                   onChange={e => setNewFolderName(e.target.value)}
-                  onKeyDown={e => {
-                    if (e.key === 'Enter') createFolder();
-                    if (e.key === 'Escape') setNewFolderParent(undefined);
-                  }}
-                  onBlur={createFolder}
-                  placeholder="폴더명" className="flex-1 px-3 py-2 text-sm"
+                  onKeyDown={e => { if (e.key === 'Enter') createFolder(); if (e.key === 'Escape') setNewFolderParent(undefined); }}
+                  onBlur={createFolder} placeholder="폴더명" className="flex-1 px-3 py-2 text-sm"
                   style={{ border: '1.5px solid var(--border)', background: 'var(--bg-card)' }} />
                 <button onClick={createFolder} className="btn-primary px-3 text-xs mono-font">OK</button>
               </div>
@@ -796,8 +581,6 @@ function StudyNotebook() {
               </button>
             </div>
           </div>
-
-          {/* Tree */}
           <div className="flex-1 overflow-y-auto px-2 pb-4">
             {folders.length === 0 ? (
               <div className="text-center py-12 px-4">
@@ -813,42 +596,26 @@ function StudyNotebook() {
               </>
             )}
           </div>
-
-          {/* Theme Switcher */}
           <div className="border-t p-4" style={{ borderColor: 'var(--line)' }}>
-            <button
-              onClick={() => setShowThemes(!showThemes)}
-              className="w-full flex items-center justify-between px-2 py-1.5 btn-ghost text-xs mono-font tracking-wider"
-            >
-              <span className="flex items-center gap-2">
-                <Icon name="palette" size={14} />THEME
-              </span>
+            <button onClick={() => setShowThemes(!showThemes)} className="w-full flex items-center justify-between px-2 py-1.5 btn-ghost text-xs mono-font tracking-wider">
+              <span className="flex items-center gap-2"><Icon name="palette" size={14} />THEME</span>
               <span className="ink-muted">{THEMES.find(t => t.id === theme)?.name}</span>
             </button>
             {showThemes && (
               <div className="mt-3 fade-in">
                 <div className="flex flex-wrap gap-2 justify-center">
                   {THEMES.map(t => (
-                    <button
-                      key={t.id}
-                      onClick={() => setTheme(t.id)}
+                    <button key={t.id} onClick={() => setTheme(t.id)}
                       className={`theme-chip ${theme === t.id ? 'active' : ''}`}
-                      style={{
-                        background: `linear-gradient(135deg, ${t.color1} 0%, ${t.color1} 50%, ${t.color2} 50%, ${t.color2} 100%)`
-                      }}
-                      title={t.name}
-                    />
+                      style={{ background: `linear-gradient(135deg, ${t.color1} 0%, ${t.color1} 50%, ${t.color2} 50%, ${t.color2} 100%)` }}
+                      title={t.name} />
                   ))}
                 </div>
-                <div className="text-center mt-2 text-[10px] mono-font ink-muted tracking-wider">
-                  click to switch
-                </div>
+                <div className="text-center mt-2 text-[10px] mono-font ink-muted tracking-wider">click to switch</div>
               </div>
             )}
           </div>
         </aside>
-
-        {/* Main */}
         <main className="flex-1 overflow-y-auto paper relative">
           <div className="md:hidden sticky top-0 z-30 paper border-b-2 px-4 py-3 flex items-center justify-between" style={{ borderColor: 'var(--border)' }}>
             <button onClick={() => setSidebarOpen(true)} className="btn-ghost p-2 flex items-center gap-2">
@@ -857,18 +624,14 @@ function StudyNotebook() {
             </button>
             <div className="display-font" style={{ fontSize: '20px' }}>Study Notebook</div>
           </div>
-
           {!currentNote ? (
             <EmptyState folders={folders} createFolder={() => { startCreateFolder(null); setSidebarOpen(true); }} theme={theme} />
-          ) : view === 'edit' ? (
-            <NoteEditor note={currentNote}
-              onChange={updates => updateNote(activeFolder, activeNote, updates)}
-              onDone={() => setView('read')}
-              onDelete={() => deleteNote(activeFolder, activeNote)}
-              onResearch={copyResearchPrompt} />
           ) : (
-            <NoteReader note={currentNote} folder={currentFolder}
-              onEdit={() => setView('edit')} onCopyPrompt={copyPrompt} copied={copied} />
+            <NoteView note={currentNote} folder={currentFolder}
+              onUpdate={updates => updateNote(activeFolder, activeNote, updates)}
+              onDelete={() => deleteNote(activeFolder, activeNote)}
+              onLock={lockNote} onUnlock={unlockNote}
+              onAnalysisRequest={requestAnalysis} onAnalysisUpdate={updateAnalysis} />
           )}
         </main>
       </div>
@@ -885,16 +648,16 @@ function EmptyState({ folders, createFolder, theme }) {
             Study<br/><span className="accent italic">Notebook</span>
           </div>
         </div>
-        <p className="body-font text-base md:text-lg ink-muted leading-relaxed mb-2 italic">"정리는 곧 이해다"</p>
+        <p className="body-font text-base md:text-lg ink-muted leading-relaxed mb-2 italic">"먼저 쓰고, 나중에 정리한다"</p>
         <div className="my-8 mx-auto w-24 h-px" style={{ background: 'var(--border)' }}></div>
         <div className="text-left space-y-3 mb-8">
           {[
-            ['01', '요약·핵심·이슈·트렌드 6개 항목으로 체계적 정리'],
-            ['02', '폴더를 트리 구조로 — 대분류 → 중분류 → 소분류'],
-            ['03', '시험용 노트는 출제율 별점 표시'],
-            ['04', '한 번 클릭으로 Claude에게 자료조사·예상문제 요청'],
-            ['05', '7가지 테마 — 기분따라 색상 변경'],
-            ['06', 'JSON 백업·복원으로 기기 간 이동 가능']
+            ['01', '공부하면서 자유롭게 본문 작성'],
+            ['02', '자유 모드 ↔ 섹션 모드 전환 가능'],
+            ['03', '✏️ 작성 중 → 🔒 마감 → ✨ 분석 완료'],
+            ['04', '마감 후 Claude가 요약·핵심·트렌드·이슈 정리'],
+            ['05', '예상문제·응용문제 한 번 클릭으로 생성'],
+            ['06', '7가지 테마 + JSON 백업·복원']
           ].map(([num, text]) => (
             <div key={num} className="flex gap-3 text-sm">
               <span className="mono-font accent font-semibold">{num}</span>
@@ -910,284 +673,289 @@ function EmptyState({ folders, createFolder, theme }) {
   );
 }
 
-function NoteEditor({ note, onChange, onDone, onDelete, onResearch }) {
+function NoteView({ note, folder, onUpdate, onDelete, onLock, onUnlock, onAnalysisRequest, onAnalysisUpdate }) {
+  const [tab, setTab] = useState('original');
   const [tagInput, setTagInput] = useState('');
+  const isDraft = note.status === 'draft';
+  const isLocked = note.status === 'locked' || note.status === 'analyzed';
+  const isAnalyzed = note.status === 'analyzed';
+
   const addTag = () => {
     const t = tagInput.trim();
     if (!t || note.tags.includes(t)) return;
-    onChange({ tags: [...note.tags, t] });
-    setTagInput('');
+    onUpdate({ tags: [...note.tags, t] }); setTagInput('');
   };
-  const addLink = () => onChange({ links: [...note.links, { title: '', url: '' }] });
-  const updateLink = (idx, field, value) => onChange({ links: note.links.map((l, i) => i === idx ? { ...l, [field]: value } : l) });
-  const removeLink = (idx) => onChange({ links: note.links.filter((_, i) => i !== idx) });
-
-  const hasTitle = note.title && note.title.trim() && note.title !== '제목 없음';
 
   return (
-    <div className="max-w-3xl mx-auto px-4 md:px-12 py-6 md:py-10 fade-in relative">
-      <div className="flex items-center justify-between mb-8 pb-4 border-b-2" style={{ borderColor: 'var(--border)' }}>
-        <span className="section-label">EDITING</span>
-        <div className="flex gap-2">
-          <button onClick={onDelete} className="px-3 py-1.5 btn-ghost text-xs mono-font flex items-center gap-1.5">
-            <Icon name="trash" size={14} />DELETE
-          </button>
-          <button onClick={onDone} className="btn-primary px-4 py-1.5 text-xs mono-font tracking-wider flex items-center gap-1.5">
-            <Icon name="check" size={14} strokeWidth={2} />DONE
-          </button>
-        </div>
-      </div>
-
-      <input type="text" value={note.title} onChange={e => onChange({ title: e.target.value })}
-        placeholder="제목..." className="display-font ink-text w-full mb-2 leading-tight"
-        style={{ background: 'transparent', fontSize: 'clamp(28px, 5vw, 44px)' }} />
-
-      <div className="flex items-center gap-4 mb-6 flex-wrap">
-        <label className="flex items-center gap-2 text-sm cursor-pointer">
-          <input type="checkbox" checked={note.isExam} onChange={e => onChange({ isExam: e.target.checked })} className="w-4 h-4" />
-          <span className="body-font">시험 노트</span>
-        </label>
-        {note.isExam && (
-          <div className="flex items-center gap-2 fade-in">
-            <span className="section-label">출제율</span>
-            <div className="flex gap-0.5">
-              {[1,2,3,4,5].map(n => (
-                <button key={n} onClick={() => onChange({ examRate: note.examRate === n ? 0 : n })} className="star-btn">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill={n <= note.examRate ? 'var(--accent)' : 'transparent'} stroke={n <= note.examRate ? 'var(--accent)' : 'var(--ink-muted)'} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                  </svg>
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-
-      <div className="mb-8">
-        <div className="section-label mb-2 flex items-center gap-1.5">
-          <Icon name="tag" size={12} strokeWidth={2} />TAGS
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {note.tags.map(tag => (
-            <span key={tag} className="text-xs px-2.5 py-1 mono-font flex items-center gap-1.5" style={{ border: '1px solid var(--border)' }}>
-              {tag}
-              <button onClick={() => onChange({ tags: note.tags.filter(t => t !== tag) })}>
-                <Icon name="x" size={12} strokeWidth={2} />
-              </button>
-            </span>
-          ))}
-          <input type="text" value={tagInput} onChange={e => setTagInput(e.target.value)}
-            onKeyDown={e => e.key === 'Enter' && (e.preventDefault(), addTag())}
-            placeholder="+ 태그" className="text-xs px-2.5 py-1 mono-font"
-            style={{ border: '1px dashed var(--ink-muted)', minWidth: '80px' }} />
-        </div>
-      </div>
-
-      {/* 자료조사 섹션 */}
-      <div className="mb-8 p-4 md:p-5" style={{ background: 'var(--accent-soft)', border: '1.5px dashed var(--accent)' }}>
-        <div className="flex items-baseline gap-2 mb-2">
-          <Icon name="sparkles" size={14} className="accent" />
-          <h3 className="display-font font-bold text-base">Claude에게 자료 요청</h3>
-        </div>
-        <p className="text-xs ink-muted body-font italic mb-4">
-          {hasTitle
-            ? '제목 기반 자료조사 프롬프트를 복사합니다. Claude 채팅창에 붙여넣고 답변을 받으면 각 항목에 복사해 넣으세요.'
-            : '먼저 제목을 입력해주세요. 제목 기반으로 Claude에게 자료조사를 요청합니다.'}
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <ResearchButton onClick={() => onResearch('full')} label="📚 전체 자료조사" desc="요약+핵심+이슈+트렌드" disabled={!hasTitle} />
-          <ResearchButton onClick={() => onResearch('summary')} label="📝 요약+핵심" desc="빠른 개요만" disabled={!hasTitle} />
-          <ResearchButton onClick={() => onResearch('trends')} label="📰 최신 트렌드" desc="최근 동향만" disabled={!hasTitle} />
-          <ResearchButton onClick={() => onResearch('issues')} label="🔥 이슈·쟁점" desc="논쟁점만" disabled={!hasTitle} />
-          {note.isExam && (
-            <div className="md:col-span-2">
-              <ResearchButton onClick={() => onResearch('examPoints')} label="🎯 출제 포인트 분석" desc="시험 노트 전용" disabled={!hasTitle} />
-            </div>
-          )}
-        </div>
-      </div>
-
-      <Section label="요약" hint="이 주제를 한 문단으로">
-        <textarea value={note.summary} onChange={e => onChange({ summary: e.target.value })}
-          placeholder="핵심 내용을 압축해서 정리..." className="w-full text-base body-font leading-relaxed resize-none" rows={4} />
-      </Section>
-      <Section label="핵심 파악" hint="반드시 알아야 할 포인트">
-        <textarea value={note.core} onChange={e => onChange({ core: e.target.value })}
-          placeholder="• 핵심 개념 1&#10;• 핵심 개념 2" className="w-full text-base body-font leading-relaxed resize-none" rows={6} />
-      </Section>
-      <Section label="이슈가 될 만한 것들" hint="논쟁점·쟁점·자주 헷갈리는 것">
-        <textarea value={note.issues} onChange={e => onChange({ issues: e.target.value })}
-          placeholder="이슈/논점/주의할 점..." className="w-full text-base body-font leading-relaxed resize-none" rows={4} />
-      </Section>
-      <Section label="최신 트렌드" hint="동향·업데이트·새로운 흐름">
-        <textarea value={note.trends} onChange={e => onChange({ trends: e.target.value })}
-          placeholder="최신 동향과 변화..." className="w-full text-base body-font leading-relaxed resize-none" rows={4} />
-      </Section>
-      <Section label="관련 링크" hint="">
-        <div className="space-y-2">
-          {note.links.map((link, i) => (
-            <div key={i} className="flex flex-col md:flex-row gap-2">
-              <input type="text" value={link.title} onChange={e => updateLink(i, 'title', e.target.value)}
-                placeholder="제목" className="px-2 py-1.5 text-sm body-font flex-1" style={{ border: '1px solid var(--line)' }} />
-              <div className="flex gap-2">
-                <input type="text" value={link.url} onChange={e => updateLink(i, 'url', e.target.value)}
-                  placeholder="https://..." className="px-2 py-1.5 text-sm mono-font flex-1 md:flex-[2]" style={{ border: '1px solid var(--line)' }} />
-                <button onClick={() => removeLink(i)} className="px-2 btn-ghost"><Icon name="x" size={16} /></button>
-              </div>
-            </div>
-          ))}
-          <button onClick={addLink} className="text-sm btn-ghost px-3 py-1.5 flex items-center gap-1.5">
-            <Icon name="plus" size={14} strokeWidth={2} />링크 추가
-          </button>
-        </div>
-      </Section>
-    </div>
-  );
-}
-
-function Section({ label, hint, children }) {
-  return (
-    <div className="mb-8">
-      <div className="flex items-baseline justify-between mb-2 flex-wrap gap-1">
-        <div className="section-label">{label}</div>
-        {hint && <div className="text-xs ink-muted italic body-font">{hint}</div>}
-      </div>
-      <div style={{ borderBottom: '1.5px solid var(--border)', paddingBottom: '4px' }}>{children}</div>
-    </div>
-  );
-}
-
-function NoteReader({ note, folder, onEdit, onCopyPrompt, copied }) {
-  return (
-    <div className="max-w-3xl mx-auto px-4 md:px-12 py-6 md:py-10 fade-in relative">
-      <div className="flex items-center justify-between mb-8 flex-wrap gap-2">
-        <div className="flex items-center gap-2 text-xs mono-font ink-muted tracking-wider">
+    <div className="max-w-4xl mx-auto px-4 md:px-12 py-6 md:py-10 fade-in relative">
+      <div className="mb-6">
+        <div className="flex items-center gap-2 text-xs mono-font ink-muted tracking-wider mb-3">
           <span>{folder.name}</span>
           <Icon name="chevronRight" size={12} strokeWidth={2} />
           <span>NOTE</span>
         </div>
-        <button onClick={onEdit} className="px-4 py-1.5 btn-ghost text-xs mono-font flex items-center gap-1.5">
-          <Icon name="edit" size={14} />EDIT
-        </button>
-      </div>
-
-      <h1 className="display-font ink-text leading-none tracking-tight mb-4" style={{ fontSize: 'clamp(32px, 6vw, 56px)' }}>{note.title}</h1>
-
-      <div className="flex items-center gap-3 flex-wrap mb-2">
-        {note.isExam && note.examRate > 0 && (
-          <div className="flex items-center gap-1">
-            <span className="section-label">출제율</span>
-            <div className="flex gap-0.5">
-              {[1,2,3,4,5].map(n => (
-                <svg key={n} width="14" height="14" viewBox="0 0 24 24"
-                  fill={n <= note.examRate ? 'var(--accent)' : 'transparent'}
-                  stroke={n <= note.examRate ? 'var(--accent)' : 'var(--ink-muted)'}
-                  strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                </svg>
-              ))}
+        <input type="text" value={note.title} onChange={e => onUpdate({ title: e.target.value })}
+          placeholder="제목..." disabled={isLocked}
+          className="display-font ink-text w-full leading-tight"
+          style={{ background: 'transparent', fontSize: 'clamp(28px, 5vw, 44px)' }} />
+        <div className="flex items-center justify-between mt-4 flex-wrap gap-3">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className={`status-badge ${isAnalyzed ? 'status-analyzed' : isLocked ? 'status-locked' : 'status-draft'}`}>
+              {isAnalyzed ? '✨ 분석 완료' : isLocked ? '🔒 마감됨' : '✏️ 작성 중'}
+            </span>
+            {note.lockedAt && (
+              <span className="text-xs ink-muted mono-font">{new Date(note.lockedAt).toLocaleDateString('ko-KR')}</span>
+            )}
+          </div>
+          <div className="flex items-center gap-2">
+            {isDraft ? (
+              <>
+                <button onClick={onDelete} className="px-3 py-1.5 btn-ghost text-xs mono-font flex items-center gap-1.5">
+                  <Icon name="trash" size={14} />DELETE
+                </button>
+                <button onClick={onLock} className="btn-accent px-4 py-2 text-xs mono-font tracking-wider flex items-center gap-1.5">
+                  <Icon name="lock" size={14} strokeWidth={2} />마감하기
+                </button>
+              </>
+            ) : (
+              <button onClick={onUnlock} className="btn-ghost px-4 py-2 text-xs mono-font tracking-wider flex items-center gap-1.5">
+                <Icon name="unlock" size={14} strokeWidth={2} />다시 편집
+              </button>
+            )}
+          </div>
+        </div>
+        <div className="flex items-center gap-3 flex-wrap mt-4">
+          {!isLocked && (
+            <label className="flex items-center gap-2 text-sm cursor-pointer">
+              <input type="checkbox" checked={note.isExam} onChange={e => onUpdate({ isExam: e.target.checked })} className="w-4 h-4" />
+              <span className="body-font">시험 노트</span>
+            </label>
+          )}
+          {note.isExam && (
+            <div className="flex items-center gap-2">
+              <span className="section-label">출제율</span>
+              <div className="flex gap-0.5">
+                {[1,2,3,4,5].map(n => (
+                  <button key={n} onClick={() => !isLocked && onUpdate({ examRate: note.examRate === n ? 0 : n })} className="star-btn" disabled={isLocked}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill={n <= note.examRate ? 'var(--accent)' : 'transparent'} stroke={n <= note.examRate ? 'var(--accent)' : 'var(--ink-muted)'} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
-        {note.tags.length > 0 && (
-          <div className="flex flex-wrap gap-1.5">
+          )}
+          <div className="flex flex-wrap gap-1.5 items-center">
             {note.tags.map(tag => (
-              <span key={tag} className="text-xs px-2 py-0.5 mono-font" style={{ border: '1px solid var(--border)' }}>{tag}</span>
+              <span key={tag} className="text-xs px-2 py-0.5 mono-font flex items-center gap-1" style={{ border: '1px solid var(--border)' }}>
+                {tag}
+                {!isLocked && <button onClick={() => onUpdate({ tags: note.tags.filter(t => t !== tag) })}><Icon name="x" size={10} strokeWidth={2} /></button>}
+              </span>
             ))}
+            {!isLocked && (
+              <input type="text" value={tagInput} onChange={e => setTagInput(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && (e.preventDefault(), addTag())}
+                placeholder="+ 태그" className="text-xs px-2 py-0.5 mono-font"
+                style={{ border: '1px dashed var(--ink-muted)', minWidth: '70px' }} />
+            )}
           </div>
-        )}
+        </div>
       </div>
+      <div className="my-6 w-full h-px" style={{ background: 'var(--border)' }}></div>
+      {isLocked && (
+        <div className="tab-bar">
+          <button onClick={() => setTab('original')} className={tab === 'original' ? 'active' : ''}>📝 내가 쓴 원본</button>
+          <button onClick={() => setTab('analysis')} className={tab === 'analysis' ? 'active' : ''}>
+            ✨ 분석 결과{isAnalyzed && <span className="ml-2 mono-font text-xs">●</span>}
+          </button>
+        </div>
+      )}
+      {(!isLocked || tab === 'original') && (
+        <OriginalView note={note} onUpdate={onUpdate} isLocked={isLocked} />
+      )}
+      {isLocked && tab === 'analysis' && (
+        <AnalysisView note={note} onAnalysisRequest={onAnalysisRequest} onAnalysisUpdate={onAnalysisUpdate} />
+      )}
+    </div>
+  );
+}
 
-      <div className="my-8 w-full h-px" style={{ background: 'var(--border)' }}></div>
-
-      <ReadSection label="요약" content={note.summary} />
-      <ReadSection label="핵심 파악" content={note.core} />
-      <ReadSection label="이슈" content={note.issues} />
-      <ReadSection label="최신 트렌드" content={note.trends} />
-
-      {note.links.filter(l => l.url).length > 0 && (
-        <div className="mb-10">
-          <div className="section-label mb-3">관련 링크</div>
-          <div className="space-y-1.5">
-            {note.links.filter(l => l.url).map((link, i) => (
-              <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm hover:accent group">
-                <Icon name="extLink" size={14} />
-                <span className="underline-decoration body-font break-all">{link.title || link.url}</span>
-              </a>
-            ))}
+function OriginalView({ note, onUpdate, isLocked }) {
+  return (
+    <div>
+      {!isLocked && (
+        <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+          <div className="mode-toggle">
+            <button onClick={() => onUpdate({ mode: 'free' })} className={note.mode === 'free' ? 'active' : ''}>자유</button>
+            <button onClick={() => onUpdate({ mode: 'sections' })} className={note.mode === 'sections' ? 'active' : ''}>섹션</button>
+          </div>
+          <div className="text-xs ink-muted body-font italic">
+            {note.mode === 'free' ? '자유롭게 다 쏟아내세요' : '주제별로 분류해서 작성'}
           </div>
         </div>
       )}
-
-      <div className="mt-12 pt-8 border-t-2" style={{ borderColor: 'var(--border)' }}>
-        <div className="flex items-baseline gap-3 mb-4">
-          <Icon name="sparkles" size={16} className="accent" />
-          <h3 className="display-font font-bold" style={{ fontSize: '24px' }}>Ask Claude</h3>
-        </div>
-        <p className="text-sm ink-muted body-font italic mb-5">
-          버튼을 누르면 노트 내용 + 요청사항이 함께 복사됩니다. Claude 채팅창에 붙여넣으면 답변해줘요.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <PromptButton onClick={() => onCopyPrompt('basic')} label="예상문제 5개" desc="객관식+주관식" />
-          <PromptButton onClick={() => onCopyPrompt('applied')} label="응용 심화문제" desc="사례 적용형" />
-          <PromptButton onClick={() => onCopyPrompt('both')} label="혼합 출제" desc="기본+응용" />
-          <PromptButton onClick={() => onCopyPrompt('review')} label="노트 검토" desc="보완점 + FAQ" />
-        </div>
-        {copied && (
-          <div className="mt-4 text-sm accent body-font italic fade-in flex items-center gap-2">
-            <Icon name="check" size={16} strokeWidth={2} />복사 완료! Claude 채팅창에 붙여넣어 주세요.
+      {note.mode === 'free' && (
+        isLocked ? (
+          <div className="body-font text-base leading-relaxed whitespace-pre-wrap" style={{ minHeight: '40vh' }}>
+            {note.freeContent || <span className="ink-muted italic">(내용 없음)</span>}
           </div>
+        ) : (
+          <textarea className="free-textarea" value={note.freeContent}
+            onChange={e => onUpdate({ freeContent: e.target.value })}
+            placeholder="여기에 자유롭게 작성하세요. 강의 내용, 책에서 본 것, 떠오르는 생각, 모르는 거... 무엇이든." />
+        )
+      )}
+      {note.mode === 'sections' && (
+        <div>
+          {note.sections.map((section, idx) => (
+            <SectionBlock key={section.id} section={section}
+              onTitleChange={(newTitle) => {
+                const newSections = [...note.sections];
+                newSections[idx] = { ...section, title: newTitle };
+                onUpdate({ sections: newSections });
+              }}
+              onContentChange={(newContent) => {
+                const newSections = [...note.sections];
+                newSections[idx] = { ...section, content: newContent };
+                onUpdate({ sections: newSections });
+              }}
+              onDelete={() => {
+                if (!confirm('이 섹션을 삭제할까요?')) return;
+                onUpdate({ sections: note.sections.filter((_, i) => i !== idx) });
+              }}
+              isLocked={isLocked} />
+          ))}
+          {!isLocked && (
+            <button onClick={() => onUpdate({ sections: [...note.sections, { id: Date.now().toString(), title: '새 섹션', content: '' }] })}
+              className="btn-ghost px-4 py-2 text-sm mono-font flex items-center gap-2">
+              <Icon name="plus" size={14} strokeWidth={2} />섹션 추가
+            </button>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function SectionBlock({ section, onTitleChange, onContentChange, onDelete, isLocked }) {
+  return (
+    <div className="section-block">
+      <div className="section-header">
+        {isLocked ? (
+          <h3 className="display-font font-bold text-lg ink-text">{section.title}</h3>
+        ) : (
+          <input type="text" value={section.title} onChange={e => onTitleChange(e.target.value)}
+            className="display-font font-bold text-lg ink-text flex-1"
+            style={{ background: 'transparent', border: 'none' }} />
         )}
+        {!isLocked && <button onClick={onDelete} className="btn-ghost p-1"><Icon name="x" size={14} /></button>}
       </div>
+      {isLocked ? (
+        <div className="body-font text-base leading-relaxed whitespace-pre-wrap">
+          {section.content || <span className="ink-muted italic text-sm">(비어있음)</span>}
+        </div>
+      ) : (
+        <textarea className="section-textarea" value={section.content}
+          onChange={e => onContentChange(e.target.value)} placeholder="이 섹션 내용..." />
+      )}
     </div>
   );
 }
 
-function ReadSection({ label, content }) {
-  if (!content?.trim()) return null;
+function AnalysisView({ note, onAnalysisRequest, onAnalysisUpdate }) {
+  const [editingField, setEditingField] = useState(null);
+  const a = note.analysis;
+
   return (
-    <div className="mb-8">
-      <div className="section-label mb-3">{label}</div>
-      <div className="body-font text-base leading-relaxed whitespace-pre-wrap">{content}</div>
+    <div className="fade-in">
+      <div className="mb-8 p-4 md:p-5" style={{ background: 'var(--accent-soft)', border: '1.5px dashed var(--accent)' }}>
+        <div className="flex items-baseline gap-2 mb-2">
+          <Icon name="sparkles" size={14} className="accent" />
+          <h3 className="display-font font-bold text-base">Claude에게 분석·문제 요청</h3>
+        </div>
+        <p className="text-xs ink-muted body-font italic mb-4">
+          버튼을 누르면 노트 내용 + 요청사항이 클립보드에 복사됩니다. Claude 채팅창에 붙여넣고 답변을 받으면 아래 항목들에 채워넣으세요.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <RequestButton onClick={() => onAnalysisRequest('analyze')} label="📚 분석 요청" desc="요약+핵심+트렌드+이슈+링크" />
+          <RequestButton onClick={() => onAnalysisRequest('basic')} label="📝 기본 예상문제" desc="객관식+주관식 5개" />
+          <RequestButton onClick={() => onAnalysisRequest('applied')} label="🎯 응용 심화문제" desc="사례 적용형 3개" />
+          <RequestButton onClick={() => onAnalysisRequest('mixed')} label="🔥 혼합 출제" desc="기본+응용 모두" />
+        </div>
+      </div>
+      <AnalysisField label="요약" emoji="📝" value={a.summary}
+        onChange={v => onAnalysisUpdate('summary', v)}
+        editing={editingField === 'summary'} onEdit={() => setEditingField('summary')} onDone={() => setEditingField(null)}
+        placeholder="Claude의 요약 답변을 여기에 붙여넣으세요" />
+      <AnalysisField label="핵심 파악" emoji="🎯" value={a.core}
+        onChange={v => onAnalysisUpdate('core', v)}
+        editing={editingField === 'core'} onEdit={() => setEditingField('core')} onDone={() => setEditingField(null)}
+        placeholder="Claude의 핵심 파악 답변을 여기에" />
+      <AnalysisField label="최신 트렌드 + 자료" emoji="📰" value={a.trends}
+        onChange={v => onAnalysisUpdate('trends', v)}
+        editing={editingField === 'trends'} onEdit={() => setEditingField('trends')} onDone={() => setEditingField(null)}
+        placeholder="Claude의 트렌드 + 링크 답변을 여기에" />
+      <AnalysisField label="이슈" emoji="🔥" value={a.issues}
+        onChange={v => onAnalysisUpdate('issues', v)}
+        editing={editingField === 'issues'} onEdit={() => setEditingField('issues')} onDone={() => setEditingField(null)}
+        placeholder="Claude의 이슈/쟁점 답변을 여기에" />
+      <AnalysisField label="예상문제" emoji="📚" value={a.problems}
+        onChange={v => onAnalysisUpdate('problems', v)}
+        editing={editingField === 'problems'} onEdit={() => setEditingField('problems')} onDone={() => setEditingField(null)}
+        placeholder="Claude가 만들어준 예상문제 + 정답·해설을 여기에" />
     </div>
   );
 }
 
-function PromptButton({ onClick, label, desc }) {
-  return (
-    <button onClick={onClick} className="note-card text-left p-4 group">
-      <div className="flex items-center justify-between mb-1">
-        <span className="display-font font-bold">{label}</span>
-        <Icon name="copy" size={14} className="ink-muted" />
-      </div>
-      <div className="text-xs ink-muted mono-font tracking-wider">{desc}</div>
-    </button>
-  );
-}
-
-function ResearchButton({ onClick, label, desc, disabled }) {
+function RequestButton({ onClick, label, desc }) {
   const [hover, setHover] = useState(false);
   return (
-    <button
-      onClick={onClick}
-      disabled={disabled}
-      onMouseEnter={() => !disabled && setHover(true)}
-      onMouseLeave={() => setHover(false)}
+    <button onClick={onClick}
+      onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
       className="text-left p-3 transition-all w-full"
       style={{
-        background: disabled ? 'transparent' : (hover ? 'var(--accent)' : 'var(--bg-card)'),
-        color: hover && !disabled ? 'var(--bg-paper)' : 'var(--ink)',
-        border: '1.5px solid ' + (disabled ? 'var(--line)' : 'var(--border)'),
-        cursor: disabled ? 'not-allowed' : 'pointer',
-        opacity: disabled ? 0.5 : 1
-      }}
-    >
+        background: hover ? 'var(--accent)' : 'var(--bg-card)',
+        color: hover ? 'var(--bg-paper)' : 'var(--ink)',
+        border: '1.5px solid var(--border)', cursor: 'pointer'
+      }}>
       <div className="flex items-center justify-between mb-0.5">
         <span className="display-font font-bold text-sm">{label}</span>
         <Icon name="copy" size={12} />
       </div>
       <div className="text-[11px] mono-font tracking-wider opacity-70">{desc}</div>
     </button>
+  );
+}
+
+function AnalysisField({ label, emoji, value, onChange, editing, onEdit, onDone, placeholder }) {
+  const isEmpty = !value?.trim();
+  return (
+    <div className={isEmpty && !editing ? 'analysis-card-empty' : 'analysis-card'}>
+      <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center gap-2">
+          <span style={{ fontSize: '16px' }}>{emoji}</span>
+          <span className="section-label">{label}</span>
+        </div>
+        {!editing ? (
+          <button onClick={onEdit} className="btn-ghost px-2 py-1 text-xs mono-font flex items-center gap-1">
+            <Icon name="edit" size={12} />{isEmpty ? 'ADD' : 'EDIT'}
+          </button>
+        ) : (
+          <button onClick={onDone} className="btn-primary px-3 py-1 text-xs mono-font flex items-center gap-1">
+            <Icon name="check" size={12} strokeWidth={2} />DONE
+          </button>
+        )}
+      </div>
+      {editing ? (
+        <textarea className="w-full text-base body-font leading-relaxed resize-none"
+          style={{ minHeight: '120px', background: 'transparent', border: '1px dashed var(--ink-muted)', padding: '8px' }}
+          value={value} onChange={e => onChange(e.target.value)} placeholder={placeholder} autoFocus />
+      ) : isEmpty ? (
+        <p className="text-sm ink-muted italic body-font">{placeholder}</p>
+      ) : (
+        <div className="body-font text-base leading-relaxed whitespace-pre-wrap">{value}</div>
+      )}
+    </div>
   );
 }
 
